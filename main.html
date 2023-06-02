@@ -1,0 +1,1407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trang chủ</title>
+
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="base.css" />
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Calistoga&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="fontawesome-free-6.4.0-web/fontawesome-free-6.4.0-web/css/all.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css" />
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="css/app.css" />
+    <link rel="stylesheet" href="css/content.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script>
+        var loader = function () {
+            setTimeout(function () {
+                $('#loader').css({ 'opacity': 0, 'visibility': 'hidden' });
+            }, 1000);
+        };
+        $(function () {
+            loader();
+        });
+    </script>
+    <style>
+        * {
+            /* reset lại margin và padding cho các tag */
+            margin: 0;
+            padding: 0;
+        }
+
+        #loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 99999;
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .circle {
+            height: 40px;
+            margin: 50px auto;
+            position: relative;
+            text-align: center;
+            width: 40px;
+            -webkit-animation: circle_dot 2.0s infinite linear;
+            animation: circle_dot 2.0s infinite linear;
+        }
+
+        .circle1,
+        .circle2 {
+            height: 60%;
+            display: inline-block;
+            background-color: #ef5f38;
+            border-radius: 100%;
+            position: absolute;
+            top: 0;
+            width: 60%;
+            -webkit-animation: circle_bounce 2.0s infinite ease-in-out;
+            animation: circle_bounce 2.0s infinite ease-in-out;
+        }
+
+        .circle2 {
+            bottom: 0;
+            top: auto;
+            -webkit-animation-delay: -1.0s;
+            animation-delay: -1.0s;
+        }
+
+        @-webkit-keyframes circle_dot {
+            100% {
+                -webkit-transform: rotate(360deg)
+            }
+        }
+
+        @keyframes circle_dot {
+            100% {
+                transform: rotate(360deg);
+                -webkit-transform: rotate(360deg)
+            }
+        }
+
+        @-webkit-keyframes circle_bounce {
+
+            0%,
+            100% {
+                -webkit-transform: scale(0.0)
+            }
+
+            50% {
+                -webkit-transform: scale(1.0)
+            }
+        }
+
+        @keyframes circle_bounce {
+
+            0%,
+            100% {
+                -webkit-transform: scale(0.0);
+                transform: scale(0.0);
+            }
+
+            50% {
+                -webkit-transform: scale(1.0);
+                transform: scale(1.0);
+            }
+        }
+    </style>
+</head>
+</head>
+
+<body>
+    <div id="loader">
+        <div class="circle">
+            <div class="circle1"></div>
+            <div class="circle2"></div>
+        </div>
+    </div>
+    <div class="app" id="app">
+        <header class="header">
+            <a href="#">
+                <img src="image/Logo.png" class="logo logo-remove" alt="">
+            </a>
+            <div class="bx bx-menu" id="menu-icon"></div>
+            <ul class="navbar">
+                <li>
+                    <a href="#" style="color: white; background-color: #34b982"><i class="fa-solid fa-house"></i>Trang
+                        Chủ</a>
+                </li>
+                <li><a href="Tin tức/tin tức.html"><i class="fa-solid fa-newspaper"></i>Tin Tức</a></li>
+                <li><a href="Weather/weather.html"><i class="fa-solid fa-sun"></i>Thời Tiết</a></li>
+                <li><a href="Calculate/calculate.html"><i class="fa-solid fa-calculator"></i>Máy Tính</a></li>
+                <li><a href="Giá cả/index.html" target="_blank"><i class="fa-solid fa-money-bill"></i>Giá Cả</a></li>
+            </ul>
+            <div class="header-btn">
+                <a href="Form/signUp/signup.html" class="sign-up">Đăng Ký</a>
+                <a href="Form/login/login.html" class="sign-in">Đăng Nhập</a>
+            </div>
+        </header>
+        <div class="container" id="mainContent">
+            <div class="container-top">
+                <div class="image-slider">
+                    <div class="image-item">
+                        <div class="image">
+                            <img src="image/1.jpg" alt="" />
+                        </div>
+                    </div>
+                    <div class="image-item">
+                        <div class="image">
+                            <img src="image/3.jpg" alt="" />
+                        </div>
+                    </div>
+                    <div class="image-item">
+                        <div class="image">
+                            <img src="image/4.jpg" alt="" />
+                        </div>
+                    </div>
+                    <div class="image-item">
+                        <div class="image">
+                            <img src="image/5.jpg" alt="" />
+                        </div>
+                    </div>
+                    <div class="image-item">
+                        <div class="image">
+                            <img src="image/6.jpg" alt="" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container__heading1 animate__animated animate__zoomIn animate__delay-2s">Quản Lí Cây Trồng</div>
+            <div class="container-mid" id="containerMid">
+                <!-- Cà phê -->
+                <div class="row">
+                    <!--image card start-->
+                    <div class="image2 animate__animated animate__fadeInUp animate__delay-3s">
+                        <img src="image/cà phê.jpg" alt="">
+                        <div class="details">
+                            <h2><span>Cà Phê</span></h2>
+
+                            <div class="more">
+                                <div class="icon-links">
+                                    <i class="fa-regular fa-heart fa-beat" id="heart1"></i>
+                                    <i class="fa-solid fa-heart fa-beat" id="new-icon1"
+                                        style="color: #ff0000; display: none;"></i>
+                                </div>
+                                <div class="icon-links">
+                                    <div class="icon-container">
+                                        <a id="showModalButton1"><i class="fa-solid fa-seedling fa-beat"></i></a>
+                                        <div class="tooltip">Chọn giống và thời điểm trồng</div>
+                                    </div>
+                                    <div class="icon-container">
+                                        <a id="showModalButton2"><i
+                                                class="fa-sharp fa-solid fa-droplet fa-beat"></i></a>
+                                        <div class="tooltip">Tưới nước và bón phân</div>
+                                    </div>
+                                    <div class="icon-container">
+                                        <a id="showModalButton3"><i class="fa-solid fa-shield fa-beat"></i></a>
+                                        <div class="tooltip">Cách bảo vệ cây trồng</div>
+                                    </div>
+                                    <div class="icon-container">
+                                        <a id="showModalButton4"><i class="fa-solid fa-trophy fa-beat"></i></a>
+                                        <div class="tooltip">Thu hoạch và bảo quản</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--image card end-->
+                    <!--image card start-->
+                    <div class="image2 animate__animated animate__fadeInDown animate__delay-3s">
+                        <img src="image/Cây cao su.jfif" alt="">
+                        <div class="details">
+                            <h2><span>Cao Su</span></h2>
+
+                            <div class="more">
+                                <div class="icon-links">
+                                    <i class="fa-regular fa-heart fa-beat" id="heart2"></i>
+                                    <i class="fa-solid fa-heart fa-beat" id="new-icon2"
+                                        style="color: #ff0000; display: none;"></i>
+                                </div>
+                                <div class="icon-links">
+                                    <div class="icon-container">
+                                        <a id="showModalButton5"><i class="fa-solid fa-seedling fa-beat"></i></a>
+                                        <div class="tooltip">Chọn giống và thời điểm trồng</div>
+                                    </div>
+                                    <div class="icon-container">
+                                        <a id="showModalButton6"><i
+                                                class="fa-sharp fa-solid fa-droplet fa-beat"></i></a>
+                                        <div class="tooltip">Tưới nước và bón phân</div>
+                                    </div>
+                                    <div class="icon-container">
+                                        <a id="showModalButton7"><i class="fa-solid fa-shield fa-beat"></i></a>
+                                        <div class="tooltip">Cách bảo vệ cây trồng</div>
+                                    </div>
+                                    <div class="icon-container">
+                                        <a id="showModalButton8"><i class="fa-solid fa-trophy fa-beat"></i></a>
+                                        <div class="tooltip">Thu hoạch và bảo quản</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--image card end-->
+                    <!--image card start-->
+                    <div class="image2 animate__animated animate__fadeInUp animate__delay-3s">
+                        <img src="image/Điều.jpg" alt="">
+                        <div class="details">
+                            <h2><span>Cây Điều</span></h2>
+
+                            <div class="more">
+                                <div class="icon-links">
+                                    <i class="fa-regular fa-heart fa-beat" id="heart3"></i>
+                                    <i class="fa-solid fa-heart fa-beat" id="new-icon3"
+                                        style="color: #ff0000; display: none;"></i>
+                                </div>
+                                <div class="icon-links">
+                                    <div class="icon-container">
+                                        <a id="showModalButton9"><i class="fa-solid fa-seedling fa-beat"></i></a>
+                                        <div class="tooltip">Chọn giống và thời điểm trồng</div>
+                                    </div>
+                                    <div class="icon-container">
+                                        <a id="showModalButton10"><i
+                                                class="fa-sharp fa-solid fa-droplet fa-beat"></i></a>
+                                        <div class="tooltip">Tưới nước và bón phân</div>
+                                    </div>
+                                    <div class="icon-container">
+                                        <a id="showModalButton11"><i class="fa-solid fa-shield fa-beat"></i></a>
+                                        <div class="tooltip">Cách bảo vệ cây trồng</div>
+                                    </div>
+                                    <div class="icon-container">
+                                        <a id="showModalButton12"><i class="fa-solid fa-trophy fa-beat"></i></a>
+                                        <div class="tooltip">Thu hoạch và bảo quản</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--image card end-->
+                </div>
+                <!--image row end-->
+                <!--image row start-->
+                <div class="row">
+                    <!--image card start-->
+                    <div class="image2 animate__animated animate__fadeInUp animate__delay-4s">
+                        <img src="image/mía.jpg" alt="">
+                        <div class="details">
+                            <h2><span>Cây Mía</span></h2>
+
+                            <div class="more">
+                                <div class="icon-links">
+                                    <i class="fa-regular fa-heart fa-beat" id="heart4"></i>
+                                    <i class="fa-solid fa-heart fa-beat" id="new-icon4"
+                                        style="color: #ff0000; display: none;"></i>
+                                </div>
+                                <div class="icon-links">
+                                    <div class="icon-container">
+                                        <a id="showModalButton13"><i class="fa-solid fa-seedling fa-beat"></i></a>
+                                        <div class="tooltip">Chọn giống và thời điểm trồng</div>
+                                    </div>
+                                    <div class="icon-container">
+                                        <a id="showModalButton14"><i
+                                                class="fa-sharp fa-solid fa-droplet fa-beat"></i></a>
+                                        <div class="tooltip">Tưới nước và bón phân</div>
+                                    </div>
+                                    <div class="icon-container">
+                                        <a id="showModalButton15"><i class="fa-solid fa-shield fa-beat"></i></a>
+                                        <div class="tooltip">Cách bảo vệ cây trồng</div>
+                                    </div>
+                                    <div class="icon-container">
+                                        <a id="showModalButton16"><i class="fa-solid fa-trophy fa-beat"></i></a>
+                                        <div class="tooltip">Thu hoạch và bảo quản</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--image card end-->
+                    <!--image card start-->
+                    <div class="image2 animate__animated animate__fadeInDown animate__delay-4s">
+                        <img src="image/thông.jpg" alt="">
+                        <div class="details">
+                            <h2><span>Cây Thông</span></h2>
+
+                            <div class="more">
+                                <div class="icon-links">
+                                    <i class="fa-regular fa-heart fa-beat" id="heart5"></i>
+                                    <i class="fa-solid fa-heart fa-beat" id="new-icon5"
+                                        style="color: #ff0000; display: none;"></i>
+                                </div>
+                                <div class="icon-links">
+                                    <div class="icon-container">
+                                        <a id="showModalButton17"><i class="fa-solid fa-seedling fa-beat"></i></a>
+                                        <div class="tooltip">Chọn giống và thời điểm trồng</div>
+                                    </div>
+                                    <div class="icon-container">
+                                        <a id="showModalButton18"><i
+                                                class="fa-sharp fa-solid fa-droplet fa-beat"></i></a>
+                                        <div class="tooltip">Tưới nước và bón phân</div>
+                                    </div>
+                                    <div class="icon-container">
+                                        <a id="showModalButton19"><i class="fa-solid fa-shield fa-beat"></i></a>
+                                        <div class="tooltip">Cách bảo vệ cây trồng</div>
+                                    </div>
+                                    <div class="icon-container">
+                                        <a id="showModalButton20"><i class="fa-solid fa-trophy fa-beat"></i></a>
+                                        <div class="tooltip">Thu hoạch và bảo quản</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--image card end-->
+                    <!--image card start-->
+                    <div class="image2 animate__animated animate__fadeInUp animate__delay-4s">
+                        <img src="image/tiêu.jpg" alt="">
+                        <div class="details">
+                            <h2><span>Hồ Tiêu</span></h2>
+
+                            <div class="more">
+                                <div class="icon-links">
+                                    <i class="fa-regular fa-heart fa-beat" id="heart6"></i>
+                                    <i class="fa-solid fa-heart fa-beat" id="new-icon6"
+                                        style="color: #ff0000; display: none;"></i>
+                                </div>
+                                <div class="icon-links">
+                                    <div class="icon-container">
+                                        <a id="showModalButton21"><i class="fa-solid fa-seedling fa-beat"></i></a>
+                                        <div class="tooltip">Chọn giống và thời điểm trồng</div>
+                                    </div>
+                                    <div class="icon-container">
+                                        <a id="showModalButton22"><i
+                                                class="fa-sharp fa-solid fa-droplet fa-beat"></i></a>
+                                        <div class="tooltip">Tưới nước và bón phân</div>
+                                    </div>
+                                    <div class="icon-container">
+                                        <a id="showModalButton23"><i class="fa-solid fa-shield fa-beat"></i></a>
+                                        <div class="tooltip">Cách bảo vệ cây trồng</div>
+                                    </div>
+                                    <div class="icon-container">
+                                        <a id="showModalButton24"><i class="fa-solid fa-trophy fa-beat"></i></a>
+                                        <div class="tooltip">Thu hoạch và bảo quản</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--image card end-->
+                </div>
+            </div>
+
+            <!-- --------------Nội dung cây Cà phê---------------- -->
+            <!-- ---------------------------------------------- -->
+            <!-- Chọn giống và thời gian trồng -->
+            <div id="modal1" class="modal">
+                <div class="modal-content animate__animated animate__bounceIn">
+                    <span id="closeModalButton1" class="close">&times;</span>
+                    <div>
+                        <h3>I. Chọn giống và thời điểm trồng:</h3>
+                        <h4>1. Cách chọn giống:</h4>
+                        <p>Để chọn giống và thời điểm trồng cây cà phê, có một số yếu tố cần xem xét, bao gồm điều kiện
+                            khí hậu, độ cao vùng trồng, đặc điểm đất, và mục tiêu kinh doanh của bạn.</p>
+                        <h5>a. Điều kiện khí hậu:</h5>
+                        <p>- Cà phê thích nhiệt độ ổn định, không quá nóng hay quá lạnh. Nhiệt độ
+                            tốt cho cây cà phê là từ 18-28 độ C. Đối với các khu vực có khí hậu nóng, nên chọn giống cà
+                            phê chịu nhiệt như Robusta. Nếu khí hậu mát mẻ, Arabica là lựa chọn phổ biến hơn.</p>
+                        <h5>b. Độ cao vùng trồng:</h5>
+                        <p>- Cây cà phê tốt nhất phát triển ở độ cao từ 600-2000 mét so với mực nước
+                            biển. Độ cao sẽ ảnh hưởng đến chất lượng và hương vị của cà phê. Arabica thích nghi với độ
+                            cao cao hơn, trong khi Robusta có thể trồng ở độ cao thấp hơn.</p>
+                        <h5>c. Đặc điểm đất:</h5>
+                        <p>- Cà phê cần đất có độ dẫn nước tốt và thoát nước tốt. Đất nên giàu chất hữu
+                            cơ và có pH từ 6-6.5. Nếu đất quá nghèo, cần phân bón để bổ sung chất dinh dưỡng cần thiết
+                            cho cây.</p>
+                        <h5>d. Mục tiêu kinh doanh:</h5>
+                        <p>- Nếu bạn muốn sản xuất cà phê chất lượng cao, Arabica là giống thích
+                            hợp. Nếu bạn muốn cây cà phê chịu được điều kiện khí hậu khắc nghiệt và có sản lượng cao
+                            hơn, Robusta là lựa chọn tốt.</p>
+                        <h4>2. Thời điểm trồng:</h4>
+                        <p>- Về thời điểm trồng cây cà phê, nó có thể thay đổi tùy theo vùng và loại giống. Tuy nhiên,
+                            thường thì cà phê được trồng vào mùa xuân hoặc mùa mưa. Để biết thời điểm cụ thể, tốt nhất
+                            là tham khảo ý kiến của các chuyên gia nông nghiệp địa phương hoặc nghiên cứu thêm thông tin
+                            về khu vực trồng cây cà phê mà bạn quan tâm.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Tưới nước và bón phân -->
+            <div id="modal2" class="modal">
+                <div class="modal-content animate__animated animate__bounceIn">
+                    <span id="closeModalButton2" class="close">&times;</span>
+                    <div>
+                        <h3>II. Tưới nước và bón phân:</h3>
+                        <h4>a. Tưới nước:</h4>
+                        <p>- Mùa mưa: Trong mùa mưa, tưới nước có thể dựa vào lượng mưa tự nhiên. Nếu lượng mưa không
+                            đủ, cần tưới thêm để đảm bảo độ ẩm cho cây.</p>
+                        <p>- Mùa khô: Trong mùa khô, tưới nước cần được thực hiện đều đặn, đặc biệt là vào các tháng khô
+                            hạn. Đảm bảo cây cà phê nhận đủ nước để phát triển.</p>
+                        <h4> b. Bón phân:</h4>
+                        <p> - Mùa mưa: Trong mùa mưa, cây cà phê cần được bón phân để đảm bảo sự phát triển tốt. Có thể
+                            sử dụng phân hữu cơ và phân NPK (Nitơ, Phốt pho, Kali) để cung cấp dinh dưỡng cho cây.</p>
+                        <p> - Mùa khô: Trong mùa khô, cây cà phê cần nhận được phân bón để duy trì sức khỏe. Cũng có thể
+                            sử dụng phân hữu cơ và phân NPK để bón cho cây.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Cách bảo vệ cây -->
+            <div id="modal3" class="modal">
+                <div class="modal-content animate__animated animate__bounceIn">
+                    <span id="closeModalButton3" class="close">&times;</span>
+                    <div>
+                        <h3>III. Cách bảo vệ cây:</h3>
+                        <p> - Kiểm soát cỏ: Giữ vùng gốc cây cà phê sạch sẽ bằng cách cắt bỏ cỏ hoặc dùng phương pháp
+                            phun thuốc diệt cỏ an toàn cho cây cà phê.</p>
+                        <p> - Kiểm soát côn trùng: Theo dõi và kiểm tra cây thường xuyên để phát hiện sự hiện diện của
+                            côn trùng. Sử dụng phương pháp hữu cơ hoặc hóa học để kiểm soát côn trùng gây hại.</p>
+                        <h4> *Dấu hiệu bệnh trên cây cà phê và cách khắc phục</h4>
+                        <h5>a. Bệnh nhiễm trùng nấm:</h5>
+                        <p> + Dấu hiệu: Lá cây có các vết đốm màu nâu, trắng, hoặc đen. Lá có thể bị héo và rụng sớm.
+                        </p>
+                        <p>+ Cách khắc phục: Sử dụng thuốc trừ nấm phù hợp để kiểm soát nhiễm trùng. Loại bỏ những lá bị
+                            nhiễm trùng và tiến hành vệ sinh vùng gốc.</p>
+                        <h5>b. Bệnh nhiễm khuẩn:</h5>
+                        <p> + Dấu hiệu: Lá cây có các vết đốm màu nâu đen, thường có một vòng màu sáng ở xung quanh. Cây
+                            có thể bị chết từ nhánh đến cả cây trưởng thành.</p>
+                        <p> + Cách khắc phục: Loại bỏ và tiêu hủy các cây bị nhiễm khuẩn. Sử dụng thuốc trừ khuẩn để
+                            ngăn chặn sự lây lan.</p>
+                        <h5>c. Bệnh sương mai:</h5>
+                        <p> + Dấu hiệu: Lá cây có các đốm trắng như vết sương, sau đó chuyển thành màu nâu đen. Lá bị
+                            héo và có thể rụng.</p>
+                        <p> - Cách khắc phục: Sử dụng thuốc trừ nấm để kiểm soát sương mai. Thông thoáng không gian
+                            quanh cây để giảm độ ẩm và sự lây lan của bệnh.</p>
+                        <h5>d. Côn trùng gây hại: </h5>
+                        <p>- Dấu hiệu: Cây bị tấn công bởi sâu bướm, rệp, hay côn trùng nhỏ khác. Có thể thấy tổ và vết
+                            ăn trên lá, thân cây hoặc quả.</p>
+                        <p> - Cách khắc phục: Sử dụng phương pháp kiểm soát côn trùng an toàn như sử dụng thuốc trừ côn
+                            trùng hữu cơ hoặc sử dụng một số loại vi khuẩn hoặc loài côn trùng có lợi để tiêu diệt côn
+                            trùng gây hại.</p>
+                        <p>Để xác định chính xác và đưa ra phương pháp khắc phục, cần phân tích chi tiết dấu hiệu bệnh
+                            và kiểm tra môi trường trồng cây cụ thể. Đối với việc xử lý bệnh tốt nhất, nên tham khảo ý
+                            kiến của chuyên gia trong lĩnh vực cây trồng .</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Thu hoạch và bảo quản -->
+            <div id="modal4" class="modal">
+                <div class="modal-content animate__animated animate__bounceIn">
+                    <span id="closeModalButton4" class="close">&times;</span>
+                    <div>
+                        <h3>IV. Thu hoạch và bảo quản:</h3>
+                        <h4>1. Thu hoạch:</h4>
+                        <p> - Cà phê Robusta thường được thu hoạch khi quả đã chín đến 80-90%. Quả chín có màu đỏ hoặc
+                            tím tùy thuộc vào giống cây.</p>
+                        <p> - Cà phê Arabica được thu hoạch khi quả đã chín hoàn toàn, có màu đỏ tươi.</p>
+
+                        <h4>2. Bảo quản sau thu hoạch:</h4>
+                        <p> - Loại bỏ lớp vỏ và mầm: Sau khi thu hoạch, lớp vỏ và mầm của quả cà phê cần được loại bỏ.
+                            Có thể sử dụng các thiết bị như máy lột vỏ để giúp tách lớp vỏ và mầm ra khỏi hạt cà phê.
+                        </p>
+                        <p> - Làm sạch và phơi khô: Hạt cà phê sau khi được tách lớp vỏ cần được làm sạch và phơi khô.
+                            Có thể sử dụng các bàn phơi hoặc hệ thống phơi tự động để đảm bảo hạt cà phê khô hoàn toàn
+                            trước khi đóng gói.</p>
+                        <p> - Đóng gói: Hạt cà phê sau khi đã được làm sạch và phơi khô cần được đóng gói kín để bảo
+                            quản chất lượng. Sử dụng túi chống ẩm và bọc ngoài để ngăn tiếp xúc với độ ẩm và ánh sáng.
+                        </p>
+                        <h4>3. Bảo quản sau đóng gói:</h4>
+                        <p>- Để bảo quản cà phê lâu dài, nên lưu trữ ở nhiệt độ mát, khô và nơi thoáng mát.</p>
+                        <p> - Tránh tiếp xúc với ánh sáng mặt trời trực tiếp và không gian có độ ẩm cao.</p>
+                        <p> - Nếu cà phê đã rang, nên đậy kín sau mỗi lần sử dụng để tránh tiếp xúc với không khí và mất
+                            đi hương vị.</p>
+                        <p> - Nên sử dụng cà phê trong thời gian ngắn sau khi mở gói để tận hưởng hương vị tươi ngon
+                            nhất.</p>
+                        <h5>Lưu ý: Quá trình thu hoạch và bảo quản cà phê có thể có những yếu tố đặc thù tùy thuộc vào
+                            quy trình và điều kiện cụ thể. Việc tham khảo và tuân thủ hướng dẫn từ các chuyên gia trong
+                            ngành cà phê là rất quan trọng để đảm bảo chất lượng sản phẩm.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- --------------Nội dung cây Cao su---------------- -->
+            <!-- ---------------------------------------------- -->
+            <!-- Chọn giống và thời gian trồng -->
+            <div id="modal5" class="modal">
+                <div class="modal-content animate__animated animate__bounceIn">
+                    <span id="closeModalButton5" class="close">&times;</span>
+                    <div>
+                        <h3>I. Chọn giống và thời điểm trồng:</h3>
+                        <h4>1. Cách chọn giống:</h4>
+                        <p>Để chọn giống và thời điểm trồng cây cao su, có một số yếu tố cần xem xét, bao gồm điều kiện
+                            khí hậu, độ cao vùng trồng, đặc điểm đất, và mục tiêu kinh doanh của bạn.</p>
+                        <h5>a. Điều kiện khí hậu:</h5>
+                        <p>- Cây cao su thích nhiệt đới và nhiệt đới gió mùa với nhiệt độ trung bình hàng năm từ
+                            20-34°C. Đối với cây cao su, lượng mưa trung bình hàng năm cần dao động từ 1.500mm đến
+                            3.500mm. Ngoài ra, cây cao su cần có thời kỳ khô rõ rệt để sinh trưởng tốt. Vì vậy, hãy chọn
+                            giống cây cao su phù hợp với điều kiện khí hậu của vùng bạn muốn trồng.</p>
+                        <h5>b. Độ cao vùng trồng:</h5>
+                        <p>- Cây cao su thường được trồng ở vùng có độ cao từ 100-800 mét so với mực
+                            nước biển. Độ cao vùng trồng có thể ảnh hưởng đến nhiệt độ và độ ẩm, vì vậy nên chọn giống
+                            cây cao su phù hợp với độ cao vùng trồng cụ thể.</p>
+                        <h5>c. Đặc điểm đất:</h5>
+                        <p>- Cây cao su cần đất có độ pH từ 4,5-6,5 và có độ thoát nước tốt. Đất cần có
+                            khả năng thoát nước tốt để tránh tình trạng ngập úng và đảm bảo sự phát triển của hệ rễ cây
+                            cao su. Ngoài ra, đất nên giàu chất hữu cơ và có khả năng cung cấp các chất dinh dưỡng cần
+                            thiết.</p>
+                        <h5>d. Mục tiêu kinh doanh:</h5>
+                        <p>- Có những giống cây cao su được phát triển để sản xuất mủ cao su, trong khi những giống khác
+                            có khả năng tạo ra cây trồng to và mạnh mẽ. Hãy xác định rõ mục tiêu kinh doanh của bạn,
+                            liệu bạn muốn tập trung vào sản xuất mủ cao su hay muốn có cây cao su lớn để khai thác gỗ.
+                        </p>
+                        <h4>2. Thời điểm trồng: </h4>
+                        <p>- Mùa xuân: Thời gian từ tháng 2 đến tháng 4 là một thời điểm phổ biến để trồng cây cao su ở
+                            khu vực này. Trong giai đoạn này, thời tiết ấm áp và độ ẩm tương đối cao, điều kiện lý tưởng
+                            cho cây cao su phát triển. Tuy nhiên, bạn cần xem xét các yếu tố khí hậu đặc thù của vùng cụ
+                            thể bạn định trồng để chọn thời điểm phù hợp.</p>
+                        <p>- Mùa hè: Thời gian từ tháng 6 đến tháng 8 cũng là một thời điểm thích hợp để trồng cây cao
+                            su. Trong mùa hè, nhiệt độ cao và lượng mưa thường ít hơn so với mùa xuân, nhưng vẫn đủ để
+                            hỗ trợ sự sinh trưởng của cây cao su.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Tưới nước và bón phân -->
+            <div id="modal6" class="modal">
+                <div class="modal-content animate__animated animate__bounceIn">
+                    <span id="closeModalButton6" class="close">&times;</span>
+                    <div>
+                        <h3>II. Tưới nước và Bón phân:</h3>
+                        <h4>a. Tưới nước:</h4>
+                        <p>
+                            - Mùa mưa: Trong mùa mưa, cây cao su thường không cần tưới nước bổ sung do
+                            đủ nước từ mưa.
+                        </p>
+                        <p>
+                            - Mùa khô: Trong mùa khô, tưới nước cây cao su cần được thực hiện theo các
+                            phương pháp như tưới xuyên qua, tưới cánh đồng, hoặc sử dụng hệ thống tưới
+                            tự động. Thời gian tưới nước tùy thuộc vào đặc điểm địa phương và tình
+                            trạng hạn hán.
+                        </p>
+                        <h4>b. Bón phân:</h4>
+                        <p>
+                            - Mùa mưa: Trong mùa mưa, cây cao su cần được bón phân để cung cấp dưỡng
+                            chất. Các loại phân bón sử dụng có thể bao gồm phân bón hữu cơ, phân bón
+                            NPK (nitơ, phospho, kali), và phân bón lá chứa các nguyên tố vi lượng như
+                            sắt, kẽm, và mangan.
+                        </p>
+                        <p>
+                            - Mùa khô: Trong mùa khô, việc bón phân giúp cung cấp dưỡng chất cho cây
+                            cao su cũng là một yếu tố quan trọng. Các loại phân bón sử dụng có thể bao
+                            gồm phân bón NPK và phân bón lá chứa các nguyên tố vi lượng.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Cách bảo vệ cây -->
+            <div id="modal7" class="modal">
+                <div class="modal-content animate__animated animate__bounceIn">
+                    <span id="closeModalButton7" class="close">&times;</span>
+                    <div>
+                        <h3>III. Cách bảo vệ cây:</h3>
+                        <p>
+                            - Kiểm soát cỏ: Để kiểm soát cỏ xung quanh cây cao su, có thể sử dụng các
+                            phương pháp như cỏ vụn, đắp trấu, phun thuốc diệt cỏ hoặc tưới chất diệt
+                            cỏ.
+                        </p>
+                        <p>
+                            - Kiểm soát côn trùng: Để kiểm soát côn trùng gây hại cho cây cao su, có
+                            thể sử dụng các biện pháp như phun thuốc trừ sâu hoặc sử dụng các loại
+                            thuốc trừ sâu hóa học.
+                        </p>
+                        <h4>*Dấu hiệu bệnh trên cây cao su và cách khắc phục:</h4>
+                        <h5>1. Dấu hiệu bệnh: Lá và thân cây có màu vàng, héo, khô.</h5>
+                        <p>
+                            - Khắc phục: Kiểm tra và xác định nguyên nhân gây ra tình trạng này. Có
+                            thể là do thiếu nước, bệnh nấm, sâu bệnh, hoặc thiếu dinh dưỡng. Thực hiện
+                            phun thuốc trừ sâu, điều chỉnh việc tưới nước và bón phân phù hợp.
+                        </p>
+                        <h5>2. Dấu hiệu bệnh: Rễ bị mục, nứt, sưng, hoặc bị nhiễm trùng.</h5>
+                        <p>
+                            - Khắc phục: Kiểm tra hệ thống thoát nước, đảm bảo cung cấp đủ oxy cho rễ.
+                            Thực hiện xử lý vết thương, vệ sinh rễ và bón phân hữu cơ để tái tạo sức
+                            khỏe cho cây.
+                        </p>
+                        <h5>
+                            3. Dấu hiệu bệnh: Lá bị đốm, nhiễm trùng, và có mảng trắng, đen hoặc nâu.
+                        </h5>
+                        <p>
+                            - Khắc phục: Xác định loại bệnh gây ra dấu hiệu này (như bệnh nấm, vi
+                            khuẩn). Sử dụng phương pháp kiểm soát bệnh tương ứng, chẳng hạn như sử
+                            dụng thuốc diệt nấm hoặc thuốc diệt vi khuẩn, điều chỉnh độ ẩm và thông
+                            gió để giảm môi trường lý tưởng cho sự phát triển của bệnh.
+                        </p>
+                        <h5>
+                            4. Dấu hiệu bệnh: Cây bị tấn công bởi côn trùng gây hại như sâu đục thân,
+                            rệp cánh, bọ trĩ,…
+                        </h5>
+                        <p>
+                            - Khắc phục: Sử dụng các biện pháp kiểm soát côn trùng như phun thuốc trừ
+                            sâu, dùng mối cản truyền để ngăn chặn sự lây lan của côn trùng, và thực
+                            hiện kiểm tra định kỳ để phát hiện và xử lý vấn đề kịp thời.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Thu hoạch và bảo quản -->
+            <div id="modal8" class="modal">
+                <div class="modal-content animate__animated animate__bounceIn">
+                    <span id="closeModalButton8" class="close">&times;</span>
+                    <div>
+                        <h3>IV.Thu hoạch và bảo quản cây cao su:</h3>
+                        <h4>1. Thu hoạch:</h4>
+                        <p> - Khi cây cao su đạt độ tuổi thu hoạch (thường từ 6-7 năm trở lên), đoạn thời gian tốt nhất
+                            để thu hoạch là vào mùa khô.</p>
+                        <p> - Sử dụng dao cạo để cạo vỏ cao su trên thân cây. Vết cạo được thực hiện dọc theo chiều vòng
+                            quanh cây và có độ sâu tùy thuộc vào yêu cầu của nhà sản xuất.</p>
+                        <h4>2. Bảo quản:</h4>
+                        <p> - Sau khi thu hoạch, cao su được chế biến thành các dạng sản phẩm khác nhau như lá cao su,
+                            hạt cao su, mủ cao su, hoặc các sản phẩm cao su công nghiệp khác.</p>
+                        <p> - Đối với mủ cao su, nó được đông lạnh để ngăn chặn sự phát triển của vi khuẩn và nấm, sau
+                            đó được vận chuyển đến các nhà máy chế biến.</p>
+                        <p> - Các sản phẩm cao su khác, như lá cao su hoặc hạt cao su, cần được đóng gói và bảo quản
+                            trong điều kiện khô ráo, thoáng mát và không bị ẩm ướt.</p>
+                        <h4>3. Vận chuyển và xuất khẩu:</h4>
+                        <p> - Sau khi chế biến, sản phẩm cao su được đóng gói và vận chuyển đến các cơ sở tiếp nhận hoặc
+                            các cảng để xuất khẩu.</p>
+                        <p> - Trong quá trình vận chuyển, sản phẩm cao su cần được bảo quản trong điều kiện nhiệt độ và
+                            độ ẩm phù hợp để đảm bảo chất lượng và độ bền của sản phẩm.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- --------------Nội dung cây điều---------------- -->
+            <!-- ---------------------------------------------- -->
+            <!-- Chọn giống và thời gian trồng -->
+            <div id="modal9" class="modal">
+                <div class="modal-content animate__animated animate__bounceIn">
+                    <span id="closeModalButton9" class="close">&times;</span>
+                    <div>
+                        <h3>I. Chọn giống và thời điểm trồng:</h3>
+                        <h4>1. Cách chọn giống:</h4>
+                        <p>Để chọn giống và thời điểm trồng cây điều, có một số yếu tố cần xem xét, bao gồm điều kiện
+                            khí hậu, độ cao vùng trồng, đặc điểm đất, và mục tiêu kinh doanh của bạn.</p>
+                        <h5>a. Điều kiện khí hậu:</h5>
+                        <p>- Nếu khu vực có khí hậu nóng, khô và có mùa mưa ngắn, bạn có thể xem xét chọn giống cây điều
+                            kháng hạn, chịu được nhiệt đới như W320, W240, SW320, SW240, WS, SP, LWP.</p>
+                        <p>- Nếu khu vực có khí hậu ẩm ướt với mưa quanh năm, giống cây chịu ẩm có thể là lựa chọn tốt,
+                            ví dụ như giống BB, BTR, W450.</p>
+                        <h5>b. Độ cao vùng trồng:</h5>
+                        <p>- Điều thường trồng ở các vùng có độ cao từ 0-500m trên mực nước biển. Các giống cây điều
+                            thông dụng như WW180, WW210, WW240, WW320 thích hợp cho các vùng trồng này.</p>
+                        <p>- Nếu vùng trồng có độ cao trên 500m, các giống cây điều chịu lạnh như JH, W180, WW210, WW240
+                            có thể là lựa chọn tốt.</p>
+                        <h5>c. Đặc điểm đất:</h5>
+                        <p>- Điều có thể được trồng trên các loại đất khác nhau, nhưng đất cát, đất phù sa hoặc đất sét
+                            cát có độ thoát nước tốt là lựa chọn tốt cho cây điều.</p>
+                        <p>- Nếu đất có độ pH cao, bạn có thể xem xét chọn giống cây điều chịu kiềm như W320, W240.</p>
+                        <h5>d. Mục tiêu kinh doanh:</h5>
+                        <p>- Nếu mục tiêu kinh doanh của bạn là sản xuất điều rang muối, các giống cây điều lớn như LWP,
+                            SW320, SW240 sẽ cho năng suất cao.</p>
+                        <p>- Nếu bạn muốn sản xuất điều hạt, các giống cây điều nhỏ như WW180, WW210 sẽ phù hợp.</p>
+                        <h4>2. Thời điểm trồng:</h4>
+                        <p>- Thời điểm trồng cây điều phụ thuộc vào vùng địa lý và điều kiện thời tiết của khu vực đó.
+                            Tuy
+                            nhiên, thông thường cây điều thường được trồng vào mùa xuân hoặc mùa đông. Ở các vùng khí
+                            hậu ôn đới, thường trồng vào khoảng tháng 3 đến tháng 4. Trong khi ở các vùng nhiệt đới, có
+                            thể trồng quanh năm.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Tưới nước và bón phân -->
+            <div id="modal10" class="modal">
+                <div class="modal-content animate__animated animate__bounceIn">
+                    <span id="closeModalButton10" class="close">&times;</span>
+                    <div>
+                        <h3>II. Tưới nước và Bón phân:</h3>
+                        <h4> a. Tưới nước:</h4>
+                        <p>- Mùa mưa: Trong mùa mưa, cây điều thường không cần tưới nước bổ sung, vì lượng mưa đủ đáp
+                            ứng nhu cầu nước của cây.</p>
+                        <p> - Mùa khô: Trong mùa khô, tưới nước cây điều cần tuân theo nguyên tắc tưới ít nhưng thường
+                            xuyên. Tưới vào buổi sáng sớm hoặc buổi tối để tránh bốc hơi nhanh.</p>
+                        <h4> b. Bón phân:</h4>
+                        <p> - Mùa mưa: Trong mùa mưa, bạn có thể sử dụng phân hữu cơ, phân bón tổng hợp hoặc phân hữu cơ
+                            pha phân bón hóa học. Cách bón phân tùy thuộc vào từng loại phân cụ thể, nhưng thường phân
+                            được bón xung quanh gốc cây và sau đó đào nhẹ đất để phân hòa vào đất.</p>
+                        <p> - Mùa khô: Trong mùa khô, bạn có thể sử dụng phân bón hữu cơ hoặc phân bón tổng hợp. Cách
+                            bón phân cũng tương tự như trong mùa mưa.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Cách bảo vệ cây -->
+            <div id="modal11" class="modal">
+                <div class="modal-content animate__animated animate__bounceIn">
+                    <span id="closeModalButton11" class="close">&times;</span>
+                    <div>
+                        <h3>III. Cách bảo vệ cây:</h3>
+                        <p> - Kiểm soát cỏ: Trong quá trình trồng và nuôi cây điều, cần tiến hành kiểm soát cỏ bằng cách
+                            cắt cỏ hoặc sử dụng thuốc diệt cỏ.</p>
+                        <p> - Kiểm soát côn trùng: Có thể sử dụng các loại thuốc diệt côn trùng để ngăn chặn sự tấn công
+                            của côn trùng gây hại như bọ xít, rầy nâu, sâu cuốn lá, và sâu bệnh.</p>
+                        <h4>*Dấu hiệu bệnh trên cây Điều và cách khắc phục:</h4>
+                        <h5>Cây điều có thể bị các bệnh như đốm lá, đạo ôn...</h5>
+                        <h5>a.Đốm lá (Leaf spot):</h5>
+                        <p> - Dấu hiệu:</p>
+                        <p> Trên lá cây điều xuất hiện các vết đốm màu nâu, đen hoặc xám. Đốm có thể mở rộng và gây hại
+                            cho lá, làm giảm khả năng quang hợp và phát triển của cây.</p>
+                        <p>- Khắc phục:</p>
+                        <p>+ Loại bỏ các lá bị nhiễm bệnh và tiêu hủy chúng để ngăn sự lây lan.</p>
+                        <p>+ Sử dụng thuốc trừ bệnh có thành phần chứa đồng hoặc các chất chống nấm khác. Tuân theo
+                            hướng
+                            dẫn sử dụng và liều lượng của sản phẩm.</p>
+                        <h5>b.Đạo ôn (Anthracnose):</h5>
+                        <p>- Dấu hiệu: </p>
+                        <p>Đạo ôn trên cây điều thường xảy ra trên cành, lá, hoa và quả. Các vết nấm xuất hiện dưới dạng
+                            đốm màu nâu đen hoặc đỏ và có thể lan rộng. Các vết nấm có thể gây ra sự mục nát và héo rụi
+                            của cành, lá và quả.</p>
+                        <p> - Khắc phục:</p>
+                        <p>+ Cắt tỉa các cành bị nhiễm bệnh và tiêu hủy chúng.</p>
+                        <p>+ Sử dụng thuốc trừ bệnh có thành phần chống nấm để ngăn chặn sự lây lan của bệnh. Đảm bảo
+                            tuân thủ hướng dẫn và liều lượng sử dụng.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Thu hoạch và bảo quản -->
+            <div id="modal12" class="modal">
+                <div class="modal-content animate__animated animate__bounceIn">
+                    <span id="closeModalButton12" class="close">&times;</span>
+                    <div>
+                        <h3>IV. Thu hoạch và bảo quản :</h3>
+                        <h4>1. Thu hoạch:</h4>
+                        <p>- Thời điểm thu hoạch cây điều phụ thuộc vào giống và điều kiện trồng, nhưng thường diễn ra
+                            sau khoảng 3-4 năm sau khi cây được trồng.</p>
+                        <p> - Cây điều được thu hoạch khi quả đã chín đạt màu nâu đỏ hoặc vàng nâu. Kiểm tra bằng cách
+                            chạm nhẹ vào quả, nếu quả rụng dễ dàng và không còn cảm giác mềm mại quá mức thì đã đến lúc
+                            thu hoạch.</p>
+                        <p> - Sử dụng công cụ như gậy đánh, cây cưa hoặc kéo để thu hoạch quả từ cây điều.</p>
+                        <h4>2. Bảo quản:</h4>
+                        <p> - Sau khi thu hoạch, cây điều cần được xử lý và bảo quản để duy trì chất lượng.</p>
+                        <p> - Loại bỏ những quả bị hỏng, nứt, hoặc nhiễm bệnh.</p>
+                        <p> - Làm sạch quả bằng cách rửa nhẹ hoặc lau khô.</p>
+                        <p> - Để quả điều trong một nơi khô ráo, thông gió và không tiếp xúc với ánh nắng mặt trời trực
+                            tiếp.</p>
+                        <p> - Quả điều có thể được bảo quản trong các túi lưới hoặc hộp gỗ để giữ cho quả thông thoáng
+                            và tránh hư hỏng.</p>
+                        <h5>Lưu ý: kiểm tra thường xuyên quả điều để phát hiện và loại bỏ những quả bị mục nát hay
+                            nhiễm bệnh để tránh sự lây lan và hủy hoại các quả khác.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- --------------Nội dung Cây mía---------------- -->
+            <!-- ---------------------------------------------- -->
+            <!-- Chọn giống và thời gian trồng -->
+            <div id="modal13" class="modal">
+                <div class="modal-content animate__animated animate__bounceIn">
+                    <span id="closeModalButton13" class="close">&times;</span>
+                    <div>
+                        <h3>I. Chọn giống và thời điểm trồng:</h3>
+                        <h4>1. Cách chọn giống:</h4>
+                        <p>Để chọn giống và thời điểm trồng cây mía, có một số yếu tố cần xem xét, bao gồm điều kiện
+                            khí hậu, độ cao vùng trồng, đặc điểm đất, và mục tiêu kinh doanh của bạn.</p>
+                        <h5>a. Điều kiện khí hậu:</h5>
+                        <p>- Cây mía thích nhiệt đới và khá nhạy cảm đối với nhiệt độ và lượng mưa. Hãy tìm hiểu về điều
+                            kiện khí hậu của khu vực trồng mía để chọn giống cây mía phù hợp. Một số giống cây mía chịu
+                            nhiệt đới như mía ROC22, mía ROC26 có khả năng chịu nhiệt tốt hơn so với các giống khác.</p>
+                        <h5>b. Độ cao vùng trồng:</h5>
+                        <p>- Một số giống cây mía có khả năng thích nghi với độ cao vùng trồng khác nhau. Đối với vùng
+                            trồng cao, giống cây mía như mía CP 72-2086 hoặc mía GT11 sẽ phù hợp hơn, trong khi đối với
+                            vùng trồng thấp hơn, có thể lựa chọn mía ROC22 hoặc mía ROC26.</p>
+                        <h5>c. Đặc điểm đất:</h5>
+                        <p>- Cây mía cần đất có độ thông thoáng tốt, giàu chất hữu cơ và có khả năng giữ nước. Trước khi
+                            chọn giống mía, nên xác định đặc điểm đất của khu vực trồng. Mía GT11 có khả năng chịu đất
+                            nghèo và mía CP 72-2086 thích hợp với đất phù sa.</p>
+                        <h5>d. Mục tiêu kinh doanh:</h5>
+                        <p>- Mỗi giống mía có đặc điểm và tiềm năng kinh doanh riêng. Bạn cần xác định mục tiêu kinh
+                            doanh của bạn để chọn giống cây mía thích hợp. Ví dụ, nếu bạn muốn sản xuất đường mía, có
+                            thể lựa chọn giống cây mía có hàm lượng đường cao như mía CP 72-2086 hoặc mía ROC22.</p>
+                        <h4>2. Thời điểm trồng:</h4>
+                        <p>- Ở Miền Trung và Tây Nguyên Việt Nam, thời điểm trồng cây mía thường diễn ra từ cuối tháng
+                            10 đến đầu tháng 12. Đây là mùa thu và đông, khi mà lượng mưa giảm và nhiệt độ thấp hơn so
+                            với mùa hè.</p>
+                        <p>- Trong khu vực này, mùa đông là thời điểm lý tưởng để trồng cây mía. Điều kiện khí hậu ở
+                            Miền Trung và Tây Nguyên trong thời gian này đáp ứng các yếu tố quan trọng cho sự phát triển
+                            của cây mía, bao gồm độ ẩm và nhiệt độ. Mùa đông cũng giúp cây mía phát triển rễ mạnh mẽ
+                            trước khi mùa mưa đến vào mùa hè.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Tưới nước và bón phân -->
+            <div id="modal14" class="modal">
+                <div class="modal-content animate__animated animate__bounceIn">
+                    <span id="closeModalButton14" class="close">&times;</span>
+                    <div>
+                        <h3>II.Tưới nước và bón phân:</h3>
+                        <h4>a. Tưới nước:</h4>
+                        <p> - Mùa mưa: Trong mùa mưa, cây mía thường không cần tưới nước thêm do có đủ lượng nước từ
+                            mưa.</p>
+                        <p> - Mùa khô: Trong mùa khô, tưới nước cho cây mía cần được thực hiện một cách đều đặn. Tưới
+                            nước bằng phương pháp tưới sâu vào gốc cây và tránh tưới lên lá để tránh gây bệnh và tiết
+                            kiệm nước.</p>
+                        <h4> b. Bón phân:</h4>
+                        <p> - Mùa mưa: Trong mùa mưa, cây mía cần bón phân hữu cơ để cung cấp dinh dưỡng cho cây. Có thể
+                            sử dụng phân chuồn chuồn, phân bò, phân heo, hoặc phân rơm để bón cho cây mía.</p>
+                        <p> - Mùa khô: Trong mùa khô, cây mía cần bón phân hỗn hợp chứa các nguyên tố dinh dưỡng chính
+                            như Nitơ (N), Phốtpho (P), Kali (K). Có thể sử dụng phân NPK hoặc phân hữu cơ để bón cho cây
+                            mía.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Cách bảo vệ cây -->
+            <div id="modal15" class="modal">
+                <div class="modal-content animate__animated animate__bounceIn">
+                    <span id="closeModalButton15" class="close">&times;</span>
+                    <div>
+                        <h3>III. Cách bảo vệ cây:</h3>
+                        <p> - Kiểm soát cỏ: Để kiểm soát cỏ xung quanh cây mía, có thể sử dụng phương pháp chướng ngại
+                            vật vật lý (ví dụ: đặt vật liệu che phủ dưới cây mía) hoặc sử dụng thuốc diệt cỏ mà không
+                            gây ảnh hưởng đến cây mía.</p>
+                        <p> - Kiểm soát côn trùng: Kiểm soát côn trùng gây hại như sâu cuốn lá, mối, và bọ trĩ có thể
+                            được thực hiện bằng cách sử dụng thuốc trừ sâu an toàn cho cây mía.</p>
+                        <h4>*Dấu hiệu bệnh trên cây Mía và cách khắc phục :</h4>
+                        <h5>a. Bệnh sương mai:</h5>
+                        <p> - Dấu hiệu: Mặt lá mía bị phủ bởi một lớp mờ mờ hoặc trắng. Lá cây mía trở nên khô và chết
+                            dần.</p>
+                        <p> - Khắc phục: Phun thuốc chống sương mai lên mặt lá cây mía để ngăn chặn sự lây lan của bệnh.
+                            Loại bỏ và tiêu hủy những lá cây bị nhiễm bệnh.</p>
+                        <h5>b. Bệnh đốm nâu lá:</h5>
+                        <p>- Dấu hiệu: Xuất hiện các đốm nâu trên lá mía. Các đốm có thể mở rộng và làm cho lá bị cháy,
+                            khô và rụng.</p>
+                        <p> - Khắc phục: Cắt bỏ và tiêu hủy những lá mía bị nhiễm bệnh. Sử dụng thuốc phun chống nấm để
+                            ngăn chặn sự lây lan của bệnh.</p>
+                        <h5>c. Bệnh cháy lá:</h5>
+                        <p> - Dấu hiệu: Lá mía chuyển từ màu xanh sang màu nâu và cuối cùng là màu đen. Lá cây khô và
+                            chết từ cành gốc lên đến ngọn.</p>
+                        <p> - Khắc phục: Loại bỏ và tiêu hủy những cây bị nhiễm bệnh. Tránh tưới quá nhiều nước và đảm
+                            bảo thông thoáng cho cây. Sử dụng thuốc phun chống nấm để ngăn chặn sự lây lan của bệnh.</p>
+                        <h5>d.Bệnh thối rễ:</h5>
+                        <p> - Dấu hiệu: Rễ mía bị thối, đen và mục nát. Cây mía trở nên yếu đuối và có dấu hiệu suy
+                            nhược</p>
+                        <p> - Khắc phục: Điều chỉnh lượng nước tưới phù hợp. Tránh tưới quá nhiều nước và cải thiện
+                            thông thoáng cho đất trồng. Sử dụng các loại thuốc phun chống nấm có tác dụng chống lại bệnh
+                            thối rễ.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Thu hoạch và bảo quản -->
+            <div id="modal16" class="modal">
+                <div class="modal-content animate__animated animate__bounceIn">
+                    <span id="closeModalButton16" class="close">&times;</span>
+                    <div>
+                        <h3>IV. Thu hoạch và bảo quản:</h3>
+                        <h4>1. Thu hoạch:</h4>
+                        <p> - Thời điểm thu hoạch: Cây mía thường được thu hoạch khi tuổi cây khoảng 10-12 tháng sau khi
+                            trồng. Quả mía
+                            nên đạt độ chín đủ để có hàm lượng đường cao.</p>
+                        <p> - Phương pháp thu hoạch: Dùng dao lưỡi sắc hoặc máy cắt mía để cắt bỏ gốc cây mía ở phần gốc
+                            gần mặt đất.
+                            Sau đó, loại bỏ những lá bên ngoài và cắt cắp đầu và đuôi mía.</p>
+                        <h4>2. Bảo quản:</h4>
+                        <p> - Rửa sạch: Rửa sạch mía bằng nước để loại bỏ bụi bẩn và cặn bẩn trên bề mặt cây mía.</p>
+                        <p> - Cắt ngắn: Cắt mía thành khúc nhỏ hoặc khúc vừa để tiện cho việc sử dụng sau này.</p>
+                        <p> - Đóng gói: Đóng gói mía trong bao nylon hoặc giấy bạc để giữ cho mía tươi mát và ngăn chặn
+                            mất nước.</p>
+                        <p> - Bảo quản lạnh: Nếu có điều kiện, có thể lưu trữ mía trong tủ lạnh để kéo dài thời gian bảo
+                            quản.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- --------------Nội dung Cây thông---------------- -->
+            <!-- ---------------------------------------------- -->
+            <!-- Chọn giống và thời gian trồng -->
+            <div id="modal17" class="modal">
+                <div class="modal-content animate__animated animate__bounceIn">
+                    <span id="closeModalButton17" class="close">&times;</span>
+                    <div>
+                        <h3>I. Chọn giống và thời điểm trồng:</h3>
+                        <h4>1. Cách chọn giống:</h4>
+                        <p>Để chọn giống và thời điểm trồng cây thông, có một số yếu tố cần xem xét, bao gồm điều kiện
+                            khí hậu, độ cao vùng trồng, đặc điểm đất, và mục tiêu kinh doanh của bạn.</p>
+                        <h5>a. Điều kiện khí hậu:</h5>
+                        <p>- Cây thông có thể sinh trưởng tốt trong nhiều điều kiện khí hậu khác nhau, nhưng vẫn có một
+                            số giống thông phù hợp hơn trong một số điều kiện cụ thể. Ví dụ, cây thông Douglas thích hợp
+                            với khí hậu mát mẻ và ẩm ướt, trong khi cây thông Aleppo có khả năng chịu hạn tốt hơn.</p>
+                        <h5>b. Độ cao vùng trồng:</h5>
+                        <p>- Cây thông có khả năng sinh trưởng ở độ cao khác nhau. Một số giống thông thích hợp cho các
+                            khu vực đồi núi cao, trong khi một số giống khác phù hợp với vùng đồng bằng. Ví dụ, cây
+                            thông balsam phát triển tốt ở độ cao trung bình, trong khi cây thông bách xanh phù hợp với
+                            các khu vực cao nguyên.</p>
+                        <h5>c. Đặc điểm đất:</h5>
+                        <p>- Cây thông có thể sinh trưởng trên nhiều loại đất, từ đất cát đến đất sét. Tuy nhiên, một số
+                            giống thông có khả năng chịu đựng đất ẩm tốt hơn, trong khi một số giống khác phát triển tốt
+                            trên đất cạn khô. Ví dụ, cây thông Sitka thích hợp với đất ẩm, trong khi cây thông loblolly
+                            thích hợp với đất sét nhiều chất hữu cơ.</p>
+                        <h5>d. Mục tiêu kinh doanh:</h5>
+                        <p>- Một số giống thông được trồng chủ yếu để cung cấp gỗ xây dựng, trong khi những giống khác
+                            thích hợp cho mục tiêu sản xuất gỗ nhanh chóng hoặc gỗ trang trí. Ví dụ, cây thông taeda
+                            thích hợp cho mục tiêu sản xuất gỗ nhanh chóng, trong khi cây thông balsam thường được trồng
+                            cho mục đích trang trí.</p>
+                        <h4>2. Thời điểm trồng:</h4>
+                        <p>- Thường diễn ra vào thời gian từ tháng 10 đến tháng 12 hàng năm. Đây là giai đoạn mùa đông,
+                            khi thời tiết có khí hậu mát mẻ và đủ độ ẩm để hỗ trợ sự phát triển ban đầu của cây thông.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Tưới nước và bón phân -->
+            <div id="modal18" class="modal">
+                <div class="modal-content animate__animated animate__bounceIn">
+                    <span id="closeModalButton18" class="close">&times;</span>
+                    <div>
+                        <h3>II.Tưới nước và bón phân:</h3>
+                        <h4> a. Tưới nước:</h4>
+                        <p>
+                            - Mùa mưa: Trong mùa mưa, thông thường không cần tưới nước bổ sung do
+                            lượng mưa đủ đáp ứng nhu cầu nước của cây.
+                        </p>
+                        <p>
+                            - Mùa khô: Trong mùa khô, cần tưới nước đều đặn để đảm bảo cây thông không
+                            bị thiếu nước. Hình thức tưới nước phù hợp là tưới sâu vào gốc cây và
+                            tránh tưới vào lá cây. Thời gian tưới nước nên chọn buổi sáng sớm hoặc
+                            chiều tối để tránh mất nước do bay hơi.
+                        </p>
+                        <h4> b. Bón phân:</h4>
+                        <p>
+                            - Mùa mưa: Trong mùa mưa, cây thông có thể được bón phân hữu cơ như phân
+                            chuồn chuồn, phân bò, hoặc phân trâu để cung cấp dinh dưỡng cho cây.
+                        </p>
+                        <p>
+                            - Mùa khô: Trong mùa khô, có thể sử dụng phân bón hóa học hoặc phân hữu cơ
+                            để bổ sung chất dinh dưỡng cho cây thông. Một số loại phân bón cụ thể có
+                            thể sử dụng là phân NPK (Nitơ, Phốt pho, Kali), phân bón chuối (hoặc phân
+                            chuồn chuồn), phân bón hữu cơ từ rơm rạ, phân bón hữu cơ từ phân bò/trâu.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Cách bảo vệ cây -->
+            <div id="modal19" class="modal">
+                <div class="modal-content animate__animated animate__bounceIn">
+                    <span id="closeModalButton19" class="close">&times;</span>
+                    <div>
+                        <h3>III. Cách bảo vệ cây:</h3>
+                        <p>
+                            - Kiểm soát cỏ: Đảm bảo vùng xung quanh cây thông không có quá nhiều cỏ
+                            dại cạnh tranh nguồn dinh dưỡng và không gian sinh trưởng của cây. Có thể
+                            dùng cỏ lục bình hoặc các phương pháp cơ bản khác để kiểm soát cỏ.
+                        </p>
+                        <p>
+                            - Kiểm soát côn trùng: Theo dõi và kiểm tra cây thường xuyên để phát hiện
+                            sự hiện diện của côn trùng. Sử dụng thuốc trừ sâu để tiêu diệt chúng , sử
+                            dụng phương pháp sinh học , loại bỏ những cây bị nhiễm bệnh
+                        </p>
+                        <h4>*Dấu hiệu bệnh trên cây Thông và cách khắc phục :</h4>
+                        <h5> a. Sâu bướm đục thân:</h5>
+                        <p>- Dấu hiệu: Các lỗ nhỏ trên thân cây, bọt nhựa hoặc phân bẩn dính trên vỏ cây, sự yếu đuối và
+                            chết của cây.</p>
+                        <p>- Cách khắc phục: Kiểm tra thường xuyên và tiêu diệt bướm và sâu bằng cách thu thập và tiêu
+                            hủy
+                            chúng. Sử dụng thuốc trừ sâu hữu cơ nếu cần thiết.</p>
+                        <h5> b. Bệnh nấm rụng lá:</h5>
+                        <p>- Dấu hiệu: Lá cây thông bị nấm phát triển, có vết đốm màu nâu hoặc đen, lá rụng sớm.</p>
+                        <p>- Cách khắc phục: Thu gom và tiêu hủy lá rụng để ngăn chặn sự lây lan của nấm. Sử dụng thuốc
+                            trừ
+                            nấm hữu cơ và tuân thủ lịch trình phun thuốc chống nấm.</p>
+                        <h5> c. Bệnh mục trên lá:</h5>
+                        <p>- Dấu hiệu: Các vết đốm mục trên lá, có thể trở thành lỗ lớn và gây chết lá.</p>
+                        <p>- Cách khắc phục: Loại bỏ lá bị nhiễm bệnh và tiêu hủy để ngăn chặn sự lây lan. Sử dụng thuốc
+                            trừ nấm hữu cơ để kiểm soát bệnh.</p>
+                        <h5> d. Rệp cánh màng:</h5>
+                        <p>- Dấu hiệu: Lá cây thông bị bạc màu và mất sức sống, rệp nhỏ màu trắng hoặc xám chạy trên lá.
+                        </p>
+                        <p>- Cách khắc phục: Dùng cánh màng hoặc cây cỏ truyền thống để kiểm soát rệp. Nếu bệnh nặng, sử
+                            dụng thuốc trừ sâu thích hợp để tiêu diệt rệp.</p>
+                        <h5> e. Bệnh nhiễm trùng rễ:</h5>
+                        <p>- Dấu hiệu: Cây thông mất sức sống, lá và thân cây mất màu, gốc cây thối rữa.</p>
+                        <p>- Cách khắc phục: Tránh tình trạng dư nước và tăng cường thoáng khí cho rễ. Sử dụng chất trị
+                            bệnh như trichoderma để ngăn chặn sự phát triển của bệnh.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Thu hoạch và bảo quản -->
+            <div id="modal20" class="modal">
+                <div class="modal-content animate__animated animate__bounceIn">
+                    <span id="closeModalButton20" class="close">&times;</span>
+                    <div>
+                        <h3>IV. Thu hoạch và bảo quản:</h3>
+                        <h4>1. Thu hoạch:</h4>
+                        <p>
+                            - Thời điểm thu hoạch: Thông thường, thời điểm thu hoạch cây thông nằm
+                            trong khoảng từ 15-20 năm sau khi trồng tùy thuộc vào mục đích sử dụng và
+                            kích thước cây.
+                        </p>
+                        <p>
+                            - Kỹ thuật thu hoạch: Quá trình thu hoạch bao gồm chặt gốc cây thông và
+                            cắt nhánh để lấy gỗ thông. Cần sử dụng công cụ sắc bén và kỹ thuật an toàn
+                            để tránh gây tổn thương đến người và cây.
+                        </p>
+                        <h4>2. Bảo quản:</h4>
+                        <p>
+                            - Tẩy tàn cây: Sau khi thu hoạch, tẩy tàn cây bằng cách loại bỏ các cành
+                            và lá cây không cần thiết để giảm nguy cơ lây nhiễm sâu bệnh và côn trùng.
+                        </p>
+                        <p>
+                            - Tạo bó: Gỗ thông sau khi thu hoạch có thể được tạo thành các bó gỗ thông
+                            để dễ dàng vận chuyển và bảo quản.
+                        </p>
+                        <p>
+                            - Lưu trữ: Cần lưu trữ gỗ thông ở một nơi khô ráo, thoáng mát và không
+                            tiếp xúc trực tiếp với đất. Đảm bảo không có ẩm ướt và môi trường phù hợp
+                            để tránh sự mục nát và nấm mốc.
+                        </p>
+                        <p>
+                            - Xử lý chống mối mọt: Để ngăn chặn mối mọt tấn công gỗ thông, có thể sử
+                            dụng các phương pháp xử lý chống mối mọt như sử dụng chất chống mối mọt,
+                            hấp thụ hoặc xử lý
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- --------------Nội dung Cây tiêu---------------- -->
+            <!-- ---------------------------------------------- -->
+            <!-- Chọn giống và thời gian trồng -->
+            <div id="modal21" class="modal">
+                <div class="modal-content animate__animated animate__bounceIn">
+                    <span id="closeModalButton21" class="close">&times;</span>
+                    <div>
+                        <h3>I. Chọn giống và thời điểm trồng:</h3>
+                        <h4>1. Cách chọn giống:</h4>
+                        <p>Để chọn giống và thời điểm trồng cây thông, có một số yếu tố cần xem xét, bao gồm điều kiện
+                            khí hậu, độ cao vùng trồng, đặc điểm đất, và mục tiêu kinh doanh của bạn.</p>
+                        <h5>a. Điều kiện khí hậu:</h5>
+                        <p>- Giống cây tiêu có thể khá nhạy cảm với điều kiện khí hậu. Tiêu thích hợp trồng ở vùng nhiệt
+                            đới và cận nhiệt đới, nơi có nhiệt độ trung bình từ 20 đến 35 độ C và độ ẩm tương đối cao.
+                            Ngoài ra, tiêu cũng cần ánh sáng mặt trời đầy đủ và không chịu được động lạnh.</p>
+                        <h5>b. Độ cao vùng trồng:</h5>
+                        <p>- Tiêu có thể trồng ở độ cao từ mực nước biển đến 600 mét. Điều quan trọng là chọn giống tiêu
+                            phù hợp với độ cao vùng trồng. Một số giống có khả năng chịu đựng và phát triển tốt ở độ cao
+                            cao hơn, trong khi một số khác có thể thích nghi tốt hơn ở độ cao thấp hơn.</p>
+                        <h5>c. Đặc điểm đất:</h5>
+                        <p>- Đất phù hợp cho trồng tiêu là đất có độ thoát nước tốt, giàu chất hữu cơ, pH từ 5.5 đến 7.0
+                            và có khả năng giữ ẩm. Các giống tiêu có thể có sự khác biệt trong việc đánh giá đất. Ví dụ,
+                            một số giống tiêu có thể phát triển tốt trên đất cát, trong khi một số giống khác có thể phù
+                            hợp hơn với đất phù sa.</p>
+                        <h5>d. Mục tiêu kinh doanh:</h5>
+                        <p>- Một số giống tiêu có năng suất cao và thời gian sinh trưởng ngắn, là lựa chọn tốt cho những
+                            người muốn đạt hiệu suất kinh doanh cao và thu hoạch nhanh. Trong khi đó, có những giống
+                            tiêu chuyên dùng cho mục đích chế biến như làm gia vị, chất làm kem, hay chất tạo màu, nên
+                            được chọn tùy theo mục đích kinh doanh cụ thể.</p>
+                        <h4>2. Thời điểm trồng:</h4>
+                        <p>- Thường diễn ra vào khoảng tháng 3 đến tháng 5 hàng năm. Đây là giai đoạn mùa xuân, khi thời
+                            tiết ổn định và nhiệt độ cao, tạo điều kiện thuận lợi cho sự phát triển của cây tiêu.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Tưới nước và bón phân -->
+            <div id="modal22" class="modal">
+                <div class="modal-content animate__animated animate__bounceIn">
+                    <span id="closeModalButton22" class="close">&times;</span>
+                    <div>
+                        <h3>II.Tưới nước và bón phân:</h3>
+                        <h4> a. Tưới nước:</h4>
+                        <p>
+                            - Mùa mưa: Trong mùa mưa, cây tiêu thường không cần tưới nước thêm do có
+                            đủ lượng nước từ mưa.
+                        </p>
+                        <p>
+                            - Mùa khô: Trong mùa khô, tưới nước cho cây tiêu cần được thực hiện một
+                            cách đều đặn. Tốt nhất là tưới sâu vào gốc cây và tránh tưới lên lá để
+                            tránh các bệnh nấm.
+                        </p>
+                        <h4> b. Bón phân:</h4>
+                        <p>
+                            - Mùa mưa: Trong mùa mưa, cây tiêu cần bón phân hữu cơ để cung cấp dinh
+                            dưỡng cho cây. Có thể sử dụng phân chuồn chuồn, phân bò, phân heo, hoặc
+                            phân rơm để bón cho cây tiêu.
+                        </p>
+                        <p>
+                            - Mùa khô: Trong mùa khô, cây tiêu cần bón phân hỗn hợp chứa các nguyên tố
+                            dinh dưỡng chính như Nitơ (N), Phốtpho (P), Kali (K). Có thể sử dụng phân
+                            NPK hoặc phân hữu cơ để bón cho cây tiêu.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Cách bảo vệ cây -->
+            <div id="modal23" class="modal">
+                <div class="modal-content animate__animated animate__bounceIn">
+                    <span id="closeModalButton23" class="close">&times;</span>
+                    <div>
+                        <h3>III. Cách bảo vệ cây:</h3>
+                        <p>
+                            - Kiểm soát cỏ: Để kiểm soát cỏ xung quanh cây tiêu, có thể sử dụng phương
+                            pháp chướng ngại vật vật lý (ví dụ: đặt vật liệu che phủ dưới cây tiêu)
+                            hoặc sử dụng thuốc diệt cỏ mà không gây ảnh hưởng đến cây tiêu.
+                        </p>
+                        <p>
+                            - Kiểm soát côn trùng: Kiểm soát côn trùng gây hại như sâu bệnh bệnh đục
+                            thân cây, sâu xanh và ve cây tiêu có thể được thực hiện bằng cách sử dụng
+                            thuốc trừ sâu an toàn cho cây tiêu.
+                        </p>
+                        <h4>
+                            *Dấu hiệu bệnh trên cây tiêu và cách khắc phục:
+                        </h4>
+                        <h5>a. Bệnh lá khô:</h5>
+                        <p>- Dấu hiệu: Lá cây tiêu bị khô, héo và chết từ cành gốc lên đến ngọn.</p>
+                        <p>
+                            - Khắc phục: Loại bỏ và tiêu hủy những cây bị nhiễm bệnh. Sử dụng thuốc
+                            phun chống nấm để ngăn chặn sự lây lan của bệnh.
+                        </p>
+                        <h5>b. Bệnh đốm lá:</h5>
+                        <p>
+                            - Dấu hiệu: Xuất hiện các đốm màu nâu hoặc đen trên lá cây. Các đốm có thể
+                            lớn dần và kéo dài trên toàn bộ lá.
+                        </p>
+                        <p>
+                            - Khắc phục: Cắt bỏ và tiêu hủy những lá bị nhiễm bệnh. Sử dụng thuốc phun
+                            chống nấm để ngăn chặn sự lây lan của bệnh.
+                        </p>
+                        <h5>c. Bệnh thối rễ:</h5>
+                        <p>
+                            - Dấu hiệu: Rễ cây tiêu bị sưng to, chuyển sang màu nâu hoặc đen. Rễ mục
+                            nát và phân hủy.
+                        </p>
+                        <p>
+                            - Khắc phục: Điều chỉnh lượng nước tưới phù hợp. Tránh tưới nước quá nhiều
+                            và cải thiện thông thoáng cho đất trồng. Sử dụng các loại thuốc phun chống
+                            nấm có tác dụng chống lại bệnh thối rễ.
+                        </p>
+                        <h5>d. Bệnh sâu cuốn lá:</h5>
+                        <p>
+                            - Dấu hiệu: Các sâu cuốn lá gấp và tạo nơi ẩn náu bên trong cuốn lá, gây
+                            ra hỏng hóc và chết lá.
+                        </p>
+                        <p>
+                            - Khắc phục: Sử dụng thuốc trừ sâu hữu cơ hoặc hóa học an toàn để tiêu
+                            diệt sâu cuốn lá. Thực hiện kiểm tra định kỳ và loại bỏ các cuốn lá bị
+                            nhiễm sâu.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Thu hoạch và bảo quản -->
+            <div id="modal24" class="modal">
+                <div class="modal-content animate__animated animate__bounceIn">
+                    <span id="closeModalButton24" class="close">&times;</span>
+                    <div>
+                        <h3>IV. Thu hoạch và bảo quản:</h3>
+                        <h4>1. Thu hoạch:</h4>
+                        <p>
+                            - Thời điểm thu hoạch: Cây tiêu thường được thu hoạch khi quả tiêu đã
+                            chuyển từ màu xanh sang màu đỏ đậm. Thời điểm thu hoạch thường dao động từ
+                            7 đến 9 tháng sau khi trồng.
+                        </p>
+                        <p>
+                            - Phương pháp thu hoạch: Quả tiêu được cắt từ cành bằng kéo hoặc dao sắc.
+                            Cần đảm bảo không gây tổn thương đến cây và quả tiêu.
+                        </p>
+                        <h4>2. Bảo quản:</h4>
+                        <p>
+                            - Loại bỏ các chất còn dính trên bề mặt quả tiêu bằng cách rửa sạch quả
+                            trong nước.
+                        </p>
+                        <p>
+                            - Phơi quả tiêu dưới ánh nắng mặt trời trong khoảng 2-3 ngày để làm khô bề
+                            mặt và giảm độ ẩm.
+                        </p>
+                        <p>
+                            - Lựa chọn quả tiêu khỏe mạnh và không bị hư hỏng để lưu trữ. Loại bỏ
+                            những quả tiêu bị nứt, sâu bệnh hoặc có bất kỳ dấu hiệu hỏng hóc nào.
+                        </p>
+                        <p>
+                            - Để quả tiêu trong các túi lưới hoặc thùng gỗ để tạo điều kiện thông gió
+                            và giữ được độ ẩm tương đối hợp lý. Đồng thời, tránh đặt quả tiêu trực
+                            tiếp trên mặt đất để tránh nấm mốc và vi khuẩn.
+                        </p>
+                        <p>
+                            - Đặt quả tiêu trong điều kiện thoáng mát, khô ráo và tránh tiếp xúc trực
+                            tiếp với ánh sáng mặt trời.
+                        </p>
+                        <p>
+                            - Theo dõi thường xuyên quả tiêu đã thu hoạch để phát hiện sớm bất kỳ quả
+                            bị hư hỏng hoặc nhiễm bệnh. Loại bỏ ngay những quả tiêu đó để không ảnh
+                            hưởng đến quả còn lại.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <script src="js/content.js"></script>
+        </div>
+
+        <div id="messenger-widget">
+            <div class="animate__animated animate__tada animate__infinite">
+                <a href="https://www.facebook.com/messages/t/114235625020586" target="_blank">
+                    <img src="image/mess.jpg" alt="Messenger" />
+                </a>
+            </div>
+            <div class="animate__animated animate__tada animate__infinite">
+                <a href="https://zalo.me/0865754733" target="_blank">
+                    <img src="image/zalo.jpg" alt="Zalo" />
+                </a>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div id="footer">
+                <div class="footer__content">
+                    <div class="footer__content-fhead">
+                        <p>Liên hệ với chúng tôi</p>
+                        <p>Hãy để lại email nếu bạn muốn đồng hành cùng chúng tôi</p>
+                        <form action="" class="footer__content-connect">
+                            <input type="email" required placeholder="Your Email Address" />
+                            <button>Gửi<i class="fa-solid fa-paper-plane"></i></button>
+                        </form>
+                        <div class="footer__content-icon">
+                            <i class="fa-brands fa-twitter"></i>
+                            <i class="fa-brands fa-linkedin-in"></i>
+                            <i class="fa-brands fa-facebook-f"></i>
+                            <i class="fa-brands fa-instagram"></i>
+                        </div>
+                    </div>
+
+                    <div class="footer__content-flast">
+                        <h2>Đồng hành cùng nông dân Việt</h2>
+                        <div class="footer__info">
+                            <p>
+                                Trường Đại học Công nghệ Thông tin & Truyền Thông Việt - Hàn, Đại
+                                học Đà Nẵng
+                            </p>
+                            <p>
+                                Địa chỉ: 470 Đường Trần Đại Nghĩa, Hoà Hải, Ngũ Hành Sơn, Đà Nẵng
+                            </p>
+                        </div>
+                        <img src="image/logo2.png" alt="" />
+                    </div>
+                </div>
+                <div class="footer__foot">
+                    <div class="footer__foot-policy">
+                        <a href="">our program</a>
+                        <a href="">privacy policy</a>
+                        <a href="">sell nothing but honesty</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        let menu = document.querySelector("#menu-icon");
+        let navbar = document.querySelector(".navbar");
+        menu.onclick = () => {
+            menu.classList.toggle("bx-x");
+            navbar.classList.toggle("open");
+        };
+    </script>
+
+    <script>
+        document.getElementById("messenger-widget").addEventListener("click", function (event) {
+            event.preventDefault();
+            if (event.target.tagName === "IMG") {
+                var link = event.target.parentNode.href;
+                window.open(link, "_blank");
+            }
+        });
+    </script>
+
+    <script>
+        var heartIcon1 = document.getElementById("heart1");
+        var newIcon1 = document.getElementById("new-icon1");
+        heartIcon1.addEventListener("click", function () {
+            heartIcon1.style.display = "none";
+            newIcon1.style.display = "inline-block";
+        });
+        newIcon1.addEventListener("click", function () {
+            heartIcon1.style.display = "inline-block";
+            newIcon1.style.display = "none";
+        });
+
+        var heartIcon2 = document.getElementById("heart2");
+        var newIcon2 = document.getElementById("new-icon2");
+        heartIcon2.addEventListener("click", function () {
+            heartIcon2.style.display = "none";
+            newIcon2.style.display = "inline-block";
+        });
+        newIcon2.addEventListener("click", function () {
+            heartIcon2.style.display = "inline-block";
+            newIcon2.style.display = "none";
+        });
+
+        var heartIcon3 = document.getElementById("heart3");
+        var newIcon3 = document.getElementById("new-icon3");
+        heartIcon3.addEventListener("click", function () {
+            heartIcon3.style.display = "none";
+            newIcon3.style.display = "inline-block";
+        });
+        newIcon3.addEventListener("click", function () {
+            heartIcon3.style.display = "inline-block";
+            newIcon3.style.display = "none";
+        });
+
+        var heartIcon4 = document.getElementById("heart4");
+        var newIcon4 = document.getElementById("new-icon4");
+        heartIcon4.addEventListener("click", function () {
+            heartIcon4.style.display = "none";
+            newIcon4.style.display = "inline-block";
+        });
+        newIcon4.addEventListener("click", function () {
+            heartIcon4.style.display = "inline-block";
+            newIcon4.style.display = "none";
+        });
+
+        var heartIcon5 = document.getElementById("heart5");
+        var newIcon5 = document.getElementById("new-icon5");
+        heartIcon5.addEventListener("click", function () {
+            heartIcon5.style.display = "none";
+            newIcon5.style.display = "inline-block";
+        });
+        newIcon5.addEventListener("click", function () {
+            heartIcon5.style.display = "inline-block";
+            newIcon5.style.display = "none";
+        });
+
+        var heartIcon6 = document.getElementById("heart6");
+        var newIcon6 = document.getElementById("new-icon6");
+        heartIcon6.addEventListener("click", function () {
+            heartIcon6.style.display = "none";
+            newIcon6.style.display = "inline-block";
+        });
+        newIcon6.addEventListener("click", function () {
+            heartIcon6.style.display = "inline-block";
+            newIcon6.style.display = "none";
+        });
+    </script>
+
+    <script>
+        const headerEL = document.querySelector('.header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                headerEL.classList.add('sticky');
+            }
+            else {
+                headerEL.classList.remove('sticky');
+            }
+        });
+    </script>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

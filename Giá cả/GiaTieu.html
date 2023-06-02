@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Price Pepper</title>
+</head>
+<style>
+    
+  .table-content {
+    font-family: Arial, sans-serif;
+  }
+
+  .table-content h2 {
+    font-size: 24px;
+    color: #333;
+  }
+
+  .price-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+
+  .price-table th,
+  .price-table td {
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+
+  .price-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .price-table td {
+    text-align: center;
+  }
+
+  .price_change {
+    font-weight: bold;
+    color: #008000;
+  }
+
+  .gia-dvt {
+    text-align: right;
+    font-style: italic;
+    color: #888;
+  }
+  .table-content {
+    font-family: Arial, sans-serif;
+  }
+
+  .table-content h2 {
+    font-size: 24px;
+    color: #333;
+  }
+
+  .live-table {
+    overflow-x: auto;
+    margin-bottom: 20px;
+  }
+
+  .livequote {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .livequote th,
+  .livequote td {
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+
+  .livequote th {
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .livequote td {
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  .price_change,
+  .price-max,
+  .price-min {
+    display: block;
+    font-weight: bold;
+    color: #008000;
+  }
+/* 
+  .price_change:before {
+    content: "+";} */
+  
+
+  .pctchange {
+    color: #888;
+  }
+
+  .gia-dvt {
+    text-align: right;
+    font-style: italic;
+    color: #888;
+  }
+
+  .less-height {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+  }
+
+  .less-height h2 {
+    font-size: 24px;
+    color: #333;
+  }
+
+  .less-height p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+  }
+
+  .less-height strong {
+    font-weight: bold;
+  }
+
+  .less-height .price_change {
+    color: #008000;
+    font-weight: bold;
+    margin-left: 5px;
+  }
+
+  .less-height .price_change:before {
+    content: "+";
+  }
+
+  .less-height .price_change[data-price^="-"] {
+    color: red;
+  }
+
+  .less-height .price_change[data-price^="-"]:before {
+    content: "";
+  }
+
+  .less-height h3 {
+    font-size: 20px;
+    color: #333;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+
+  .less-height hr {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .br-1px {
+    height: 1px;
+    background-color: #ccc;
+    border: none;
+  }
+
+  .mb20 {
+    margin-bottom: 20px;
+  }
+
+
+
+  
+</style>
+
+
+<body>
+
+    <div id="gia-noi-dia" class="table-content">
+        <h2>Giá Hồ Tiêu trong nước</h2>
+        <table class="price-table">
+        <thead>
+        <tr>
+        <th>Thị trường</th>
+        <th>Trung bình</th>
+        <th>Thay đổi</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+        <td data-thi-truong="VN-0500" class="gnd_market">Đắk Lắk</td>
+        <td class="gnd-gia" data-price="7400">74,000</td>
+        <td><span class="price_change" data-price="0">0</span></td>
+        </tr><tr>
+        <td data-thi-truong="VN-063" class="gnd_market">Gia Lai</td>
+        <td class="gnd-gia" data-price="7250">72,500</td>
+        <td><span class="price_change" data-price="0">0</span></td>
+        </tr><tr>
+        <td data-thi-truong="VN-0510" class="gnd_market">Đắk Nông</td>
+        <td class="gnd-gia" data-price="74000">74,000</td>
+        <td><span class="price_change" data-price="0">0</span></td>
+        </tr><tr>
+        <td data-thi-truong="VN-PEPP" class="gnd_market">Bà Rịa - Vũng Tàu</td>
+        <td class="gnd-gia" data-price="75500">75,500</td>
+        <td><span class="price_change" data-price="0">0</span></td>
+        </tr><tr>
+        <td data-thi-truong="VN-PEPP" class="gnd_market">Bình Phước</td>
+        <td class="gnd-gia" data-price="75000">75,000</td>
+        <td><span class="price_change" data-price="0">0</span></td>
+        </tr><tr>
+        <td data-thi-truong="VN-PEPP" class="gnd_market">Đồng Nai</td>
+        <td class="gnd-gia" data-price="73000">73,000</td>
+        <td><span class="price_change" data-price="0">0</span></td>
+        </tr><tr>
+        <td data-thi-truong="USD-VND" class="gnd_market">Tỷ giá USD/VND</td>
+        <td class="gnd-gia" data-price="23280">23,280</td>
+        <td><span class="price_change" data-price="15">15</span></td>
+        </tr> </tbody>
+        </table>
+        <div class="gia-dvt">
+        <p>Đơn vị tính: VNĐ/kg </p>
+        </div>
+        </div> 
+
+        <div id="gia-noi-dia" class="table-content">
+            <h2>Bảng giá tiêu đen thế giới</h2>
+            <table class="price-table">
+            <thead>
+            <tr>
+            <th>Tên Loại</th>
+            <th>Trung bình</th>
+            <th>Thay đổi</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+            <td data-thi-truong="VN-0500" class="gnd_market">Tiêu Indonesia(Tiêu đen LamPung)</td>
+            <td class="gnd-gia" data-price="3603">3,603</td>
+            <td><span class="price_change" data-price="0,53">0,53%</span></td>
+            </tr><tr>
+            <td data-thi-truong="VN-063" class="gnd_market">Tiêu Brazil ASTA 570</td>
+            <td class="gnd-gia" data-price="2950">2,950</td>
+            <td><span class="price_change" data-price="0">0</span></td>
+            </tr><tr>
+            <td data-thi-truong="VN-0510" class="gnd_market">Tiêu Kuching ASTA(Tiêu đen Malaysia)</td>
+            <td class="gnd-gia" data-price="4900">4,900</td>
+            <td><span class="price_change" data-price="0">0</span></td>
+            </tr><tr>
+            <td data-thi-truong="VN-PEPP" class="gnd_market">Tiêu trắng Muntok</td>
+            <td class="gnd-gia" data-price="6053">6,053</td>
+            <td><span class="price_change" data-price="0,51">0,51%</span></td>
+            </tr><tr>
+            <td data-thi-truong="VN-PEPP" class="gnd_market">Tiêu Trắng Malaysia</td>
+            <td class="gnd-gia" data-price="7300">7,300</td>
+            <td><span class="price_change" data-price="0">0</span></td>
+            </tr></tbody>
+            </table>
+            <div class="gia-dvt">
+            <p>Đơn vị tính: USD/tấn </p>
+            </div>
+            </div> 
+            <script type="text/javascript">
+                function updateTradeTime() {
+                  var now = new Date();
+                  var hours = now.getHours();
+                  var minutes = now.getMinutes();
+                  var seconds = now.getSeconds();
+                  var timeString = hours + ":" + minutes + ":" + seconds;
+                  document.getElementById("pepper_tradetime").innerHTML = timeString;
+                }
+              
+                setInterval(updateTradeTime, 15000);
+              </script>
+
+    
+
+        
+</body>
+</html>

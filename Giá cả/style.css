@@ -1,0 +1,230 @@
+/*Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;900&family=Roboto:wght@300;700&display=swap');
+
+* {
+   font-family: 'Poppins', sans-serif;
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   list-style: none;
+   text-decoration: none;
+   scroll-padding-top: 2rem;
+   scroll-behavior: smooth;
+
+}
+
+/*Some Variables */
+:root {
+   --green-color: #34b982;
+   --light--green-color: #c0eb7b;
+   --orange-color: ;
+   --light-orange-color: #ff7e00;
+   --text-color: #1a2428;
+   --bg-color: #fff;
+}
+
+.logo{
+   width: 120px;
+   margin-top: -5px;
+   margin-bottom: -10px;
+}
+
+img {
+   width: 100%;
+   margin-top: -27px;
+}
+
+.heading {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin-top: 15px;
+   margin-bottom: 25px;
+}
+
+.heading h1 {
+   font-size: 2.5rem;
+   font-weight: 600;
+}
+
+.heading span {
+   color: var(--green-color);
+}
+
+.categories {
+   max-width: 968px;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+.categories-conatiner {
+   display: grid;
+   /* sửa kích thước ảnh */
+   grid-template-columns: repeat(auto-fit, minmax(216px, auto));
+   gap: 3rem;
+   margin-top: 0.5rem;
+   margin-bottom: 25px;
+}
+
+.categories-conatiner .box {
+   position: relative;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   padding: 15px;
+    height: 16rem;
+}
+
+.categories-conatiner .box img {
+   width: 110%;
+   height: 250px;
+   object-fit: contain;
+   object-position: center;
+}
+
+.categories-conatiner .box h2 {
+   font-size: 1.5rem;
+   font-size: 600;
+}
+
+.categories-conatiner .box span {
+   font-size: 0.8rem;
+   font-size: 400;
+   margin-bottom: 1rem;
+}
+
+.categories-conatiner .box .bx {
+   padding: 10px;
+   background: var(--green-color);
+   color: var(--bg-color);
+   border-radius: 5rem;
+   margin-top: 2rem;
+   position: absolute;
+   bottom: -8%;
+   display: none;
+   margin-left: -15px;
+}
+
+.categories-conatiner .box .bx:hover {
+   background: var(--light-orange-color);
+   transition: 0.2s all linear;
+}
+
+.categories-conatiner .box:hover .bx {
+   display: block;
+   transition: 0.2s all linear;
+}
+
+.box1 {
+   background: #27ff88;
+}
+
+.box2 {
+   background: #27ff88;
+}
+
+.box3 {
+   background: #27ff88;
+}
+
+.box4 {
+   background: #27ff88;
+}
+
+.box5 {
+   background: #27ff88;
+}
+
+.box6 {
+   background: #27ff88;
+}
+
+.products {
+   max-width: 968px;
+   margin-left: auto;
+   margin-right: auto;
+   margin-top: 50px;
+}
+
+.product-container {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(260px, auto));
+   gap: 1.5rem;
+   margin-top: 35px;
+   margin-bottom: 35px;
+   margin-top: 20px;
+}
+
+.product-container .box {
+   padding: 20px;
+   box-shadow: 1px 2px 11px 4px rgb(14 55 54 / 15%);
+   border-radius: 0.5rem;
+   position: relative;
+}
+
+.product-container .box img {
+   width: 100%;
+   height: 200px;
+   object-fit: contain;
+   object-position: center;
+}
+
+.product-container .box span {
+   font-weight: 500;
+   font-size: 16px;
+}
+
+.product-container .box h2 {
+   font-size: 1.2rem;
+   font-weight: 600;
+}
+
+.product-container .box .price {
+   font-size: 1rem;
+   font-weight: 600;
+   margin-top: 0.5rem;
+   color: #34b982;
+}
+
+.product-container .box span {
+   color: #999999;
+}
+
+.product-container .box .bx-heart {
+   position: absolute;
+   top: 1rem;
+   right: 1rem;
+   font-size: 20px;
+   color: var(--light-orange-color);
+}
+
+.product-container .box .discout {
+   position: absolute;
+   top: 1rem;
+   left: 0;
+   background: var(--light-orange-color);
+   color: var(--bg-color);
+   padding: 4px 18px;
+   clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 0 100%, 0% 50%, 0 0);
+}
+
+@media screen and (max-width: 600px) {
+   .box{
+      width: 75%;
+   }
+   img{
+      margin-top: -45px;
+   }
+
+   .categories-conatiner{
+      margin-left: 20%;
+   }
+
+   .products{
+      margin-left: 5px;
+   }
+
+   .product-container{
+      margin-left: 18%;
+   }
+}

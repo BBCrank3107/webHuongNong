@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Price</title>
+    <!-- Link to css -->
+    <link rel="stylesheet" href="style.css">
+    <!-- box icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script>
+        var loader = function () {
+            setTimeout(function () {
+                $('#loader').css({ 'opacity': 0, 'visibility': 'hidden' });
+            }, 1000);
+        };
+        $(function () {
+            loader();
+        });
+    </script>
+    <style>
+        * {
+            /* reset lại margin và padding cho các tag */
+            margin: 0;
+            padding: 0;
+        }
+
+        #loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 99999;
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .circle {
+            height: 40px;
+            margin: 50px auto;
+            position: relative;
+            text-align: center;
+            width: 40px;
+            -webkit-animation: circle_dot 2.0s infinite linear;
+            animation: circle_dot 2.0s infinite linear;
+        }
+
+        .circle1,
+        .circle2 {
+            height: 60%;
+            display: inline-block;
+            background-color: #ef5f38;
+            border-radius: 100%;
+            position: absolute;
+            top: 0;
+            width: 60%;
+            -webkit-animation: circle_bounce 2.0s infinite ease-in-out;
+            animation: circle_bounce 2.0s infinite ease-in-out;
+        }
+
+        .circle2 {
+            bottom: 0;
+            top: auto;
+            -webkit-animation-delay: -1.0s;
+            animation-delay: -1.0s;
+        }
+
+        @-webkit-keyframes circle_dot {
+            100% {
+                -webkit-transform: rotate(360deg)
+            }
+        }
+
+        @keyframes circle_dot {
+            100% {
+                transform: rotate(360deg);
+                -webkit-transform: rotate(360deg)
+            }
+        }
+
+        @-webkit-keyframes circle_bounce {
+
+            0%,
+            100% {
+                -webkit-transform: scale(0.0)
+            }
+
+            50% {
+                -webkit-transform: scale(1.0)
+            }
+        }
+
+        @keyframes circle_bounce {
+
+            0%,
+            100% {
+                -webkit-transform: scale(0.0);
+                transform: scale(0.0);
+            }
+
+            50% {
+                -webkit-transform: scale(1.0);
+                transform: scale(1.0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="loader">
+        <div class="circle">
+            <div class="circle1"></div>
+            <div class="circle2"></div>
+        </div>
+    </div>
+    <!-- Categories -->
+    <Section class="categories" id="categories">
+        <div class="heading animate__animated animate__heartBeat animate__delay-1s">
+            <div>
+                <img class="logo" src="../image/Logo.png" alt="">
+            </div>
+            <div>
+                <h1>Bảng giá <span>Thị trường</span> </h1>
+            </div>
+        </div>
+        <!-- Container Content -->
+        <div class="categories-conatiner">
+            <!-- box 1 -->
+            <div class="box box1 animate__animated animate__fadeInDown animate__delay-2s">
+                <img src="img/coffee-3923897.jpg" alt="">
+                <h2>Cafe</h2>
+                <a href="Cafe.html" target="_blank"><i class='bx bx-right-arrow-alt'></i></a>
+            </div>
+
+            <!-- box 2 -->
+            <div class="box box2 animate__animated animate__fadeInUp animate__delay-2s">
+                <img src="img/HoTieu.png" alt="">
+                <h2>Hồ Tiêu</h2>
+                <a href="GiaTieu.html" target="_blank"><i class='bx bx-right-arrow-alt'></i></a>
+            </div>
+
+            <!-- box 3 -->
+            <div class="box box3 animate__animated animate__fadeInDown animate__delay-2s">
+                <img src="img/resin-2290750.jpg" alt="">
+                <h2>Cao su</h2>
+                <a href="giacaosu.html" target="_blank"><i class='bx bx-right-arrow-alt'></i></a>
+            </div>
+
+            <!-- box 4 -->
+            <div class="box box4 animate__animated animate__fadeInUp animate__delay-2s">
+                <img src="img/cashew-633919.jpg" alt="">
+                <h2>Cây Điều</h2>
+                <a href="giadieu.html" target="_blank"><i class='bx bx-right-arrow-alt'></i></a>
+            </div>
+
+            <!-- box 5 -->
+            <div class="box box5 animate__animated animate__fadeInDown animate__delay-2s">
+                <img src="img/mia-nguyen-cay.jpg" alt="">
+                <h2>Cây Mía</h2>
+                <a href="giamia.html" target="_blank"><i class='bx bx-right-arrow-alt'></i></a>
+            </div>
+
+            <!-- box 6 -->
+            <div class="box box6 animate__animated animate__fadeInUp animate__delay-2s">
+                <img src="img/cây thông.jpg" alt="">
+                <h2>Cây Thông</h2>
+                <a href="giago.html" target="_blank"><i class='bx bx-right-arrow-alt'></i></a>
+            </div>
+        </div>
+    </Section>
+
+    <!-- Products -->
+    <section class="products" id="products">
+        <div class="heading animate__animated animate__zoomIn animate__delay-3s">
+            <h1>Một số loại phổ biến <br> <span>Điển hình</span> </h1>
+        </div>
+        <!-- Product Content -->
+        <div class="product-container">
+
+            <!-- Box 1 -->
+            <div class="box animate__animated animate__zoomIn animate__delay-3s">
+                <img src="./img/cafe1.jpg" alt="">
+                <span>Cập nhật: Hôm nay</span>
+                <h2>Cà phê Đăk Lăk</h2>
+                <h3 class="price">60.700 VNĐ <span>/kg</span></h3>
+            </div>
+
+
+            <!-- Box 2 -->
+            <div class="box animate__animated animate__zoomIn animate__delay-3s">
+                <img src="./img/caosu1.jpg" alt="">
+                <span>Cập nhật: Hôm nay</span>
+                <h2>Cao su Bình Phước</h2>
+                <h3 class="price">270-280 đồng<span>/độ mủ</span></h3>
+            </div>
+
+
+            <!-- Box 3 -->
+            <div class="box animate__animated animate__zoomIn animate__delay-3s">
+                <img src="./img/dieu1.jpg" alt="">
+                <span>Cập nhật: Hôm nay</span>
+                <h2>Giá Điều tươi Gia Lai</h2>
+                <h3 class="price">24.500-26.000VNĐ <span>/kg</span></h3>
+            </div>
+
+
+            <!-- Box 4 -->
+            <div class="box animate__animated animate__zoomIn animate__delay-3s">
+                <img src="./img/mia1.jpg" alt="">
+                <span>Cập nhật: Hôm nay</span>
+                <h2>Mía An Giang</h2>
+                <h3 class="price">900.000-1.150.000 VNĐ <span>/tấn</span></h3>
+            </div>
+
+
+
+            <!-- Box 5 -->
+            <div class="box animate__animated animate__zoomIn animate__delay-3s">
+                <img src="./img/hotieu1.jpg" alt="">
+                <span>Cập nhật: Hôm nay</span>
+                <h2>Hồ tiêu Đăk Lăk</h2>
+                <h3 class="price">74.000 VNĐ <span>/kg</span></h3>
+            </div>
+
+
+
+            <!-- Box 6 -->
+            <div class="box animate__animated animate__zoomIn animate__delay-3s">
+                <img src="./img/thong1.jpg" alt="">
+                <span>Cập nhật: Hôm qua</span>
+                <h2>Gỗ thông</h2>
+                <h3 class="price">1.500.000-5.000.000 VNĐ<span>/m3</span></h3>
+            </div>
+        </div>
+    </section>
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- Link to Js -->
+    <script src="main.js"></script>
+</body>
+
+</html>

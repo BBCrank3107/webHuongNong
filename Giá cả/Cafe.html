@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Price Cafe</title>
+</head>
+<style>
+    
+  .table-content {
+    font-family: Arial, sans-serif;
+  }
+
+  .table-content h2 {
+    font-size: 24px;
+    color: #333;
+  }
+
+  .price-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+
+  .price-table th,
+  .price-table td {
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+
+  .price-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .price-table td {
+    text-align: center;
+  }
+
+  .price_change {
+    font-weight: bold;
+    color: #008000;
+  }
+
+  .gia-dvt {
+    text-align: right;
+    font-style: italic;
+    color: #888;
+  }
+  .table-content {
+    font-family: Arial, sans-serif;
+  }
+
+  .table-content h2 {
+    font-size: 24px;
+    color: #333;
+  }
+
+  .live-table {
+    overflow-x: auto;
+    margin-bottom: 20px;
+  }
+
+  .livequote {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .livequote th,
+  .livequote td {
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+
+  .livequote th {
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .livequote td {
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  .price_change,
+  .price-max,
+  .price-min {
+    display: block;
+    font-weight: bold;
+    color: #008000;
+  }
+
+  .price_change:before {
+    content: "+";
+  }
+
+  .pctchange {
+    color: #888;
+  }
+
+  .gia-dvt {
+    text-align: right;
+    font-style: italic;
+    color: #888;
+  }
+
+  .less-height {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+  }
+
+  .less-height h2 {
+    font-size: 24px;
+    color: #333;
+  }
+
+  .less-height p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+  }
+
+  .less-height strong {
+    font-weight: bold;
+  }
+
+  .less-height .price_change {
+    color: #008000;
+    font-weight: bold;
+    margin-left: 5px;
+  }
+
+  .less-height .price_change:before {
+    content: "+";
+  }
+
+  .less-height .price_change[data-price^="-"] {
+    color: red;
+  }
+
+  .less-height .price_change[data-price^="-"]:before {
+    content: "";
+  }
+
+  .less-height h3 {
+    font-size: 20px;
+    color: #333;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+
+  .less-height hr {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .br-1px {
+    height: 1px;
+    background-color: #ccc;
+    border: none;
+  }
+
+  .mb20 {
+    margin-bottom: 20px;
+  }
+
+
+
+  
+</style>
+
+
+<body>
+
+    <div id="gia-noi-dia" class="table-content">
+        <h2>Giá cà phê trong nước</h2>
+        <table class="price-table">
+        <thead>
+        <tr>
+        <th>Thị trường</th>
+        <th>Trung bình</th>
+        <th>Thay đổi</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+        <td data-thi-truong="VN-0500" class="gnd_market">Đắk Lắk</td>
+        <td class="gnd-gia" data-price="61700">61,700</td>
+        <td><span class="price_change" data-price="1000">1,000</span></td>
+        </tr><tr>
+        <td data-thi-truong="VN-063" class="gnd_market">Lâm Đồng</td>
+        <td class="gnd-gia" data-price="61200">61,200</td>
+        <td><span class="price_change" data-price="1000">1,000</span></td>
+        </tr><tr>
+        <td data-thi-truong="VN-059" class="gnd_market">Gia Lai</td>
+        <td class="gnd-gia" data-price="61500">61,500</td>
+        <td><span class="price_change" data-price="1000">1,000</span></td>
+        </tr><tr>
+        <td data-thi-truong="VN-0510" class="gnd_market">Đắk Nông</td>
+        <td class="gnd-gia" data-price="61800">61,800</td>
+        <td><span class="price_change" data-price="1000">1,000</span></td>
+        </tr><tr>
+        <td data-thi-truong="VN-PEPP" class="gnd_market">Hồ tiêu</td>
+        <td class="gnd-gia" data-price="73500">73,500</td>
+        <td><span class="price_change" data-price="500">500</span></td>
+        </tr><tr>
+        <td data-thi-truong="USD-VND" class="gnd_market">Tỷ giá USD/VND</td>
+        <td class="gnd-gia" data-price="23280">23,280</td>
+        <td><span class="price_change" data-price="15">15</span></td>
+        </tr> </tbody>
+        </table>
+        <div class="gia-dvt">
+        <p>Đơn vị tính: VNĐ/kg </p>
+        </div>
+        </div> 
+
+    <section id="robusta-london" class="table-content">
+        <h2>Giá cà phê Robusta London</h2>
+        <div class="live-table">
+        <table class="has-scroll livequote gia-noi-dia has-scroll">
+        <thead>
+        <tr>
+        <th class="hasShadow">Kỳ hạn</th>
+        <th>Giá khớp</th>
+        <th>Thay đổi</th>
+        <th>Cao nhất</th>
+        <th>Thấp nhất</th>
+        <th>Khối lượng</th>
+        <th>Mở cửa</th>
+        <th>Hôm trước</th>
+        <th>HĐ mở</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+        <td class="hasShadow">07/23</td>
+        <td data-price="2605" class="gnd--price">2,605</td>
+        <td>
+        <span data-price="49" class="price_change price-color bold">49</span>
+        <span class="pctchange">1.92%</span>
+        </td>
+        <td>
+        <span class="price-high">2,619</span>
+        <span data-price="63" class="price-max price_change">63</span>
+        </td>
+        <td>
+        <span class="price-high">2,562</span>
+        <span data-price="6" class="price-min price_change">6</span>
+        </td>
+        <td>8,765</td>
+        <td>2,570</td>
+        <td>2,556</td>
+        <td>56,816</td>
+        </tr><tr>
+        <td class="hasShadow">09/23</td>
+        <td data-price="2567" class="gnd--price">2,567</td>
+        <td>
+        <span data-price="47" class="price_change price-color bold">47</span>
+        <span class="pctchange">1.87%</span>
+        </td>
+        <td>
+        <span class="price-high">2,580</span>
+        <span data-price="60" class="price-max price_change">60</span>
+        </td>
+        <td>
+        <span class="price-high">2,525</span>
+        <span data-price="5" class="price-min price_change">5</span>
+        </td>
+        <td>9,214</td>
+        <td>2,525</td>
+        <td>2,520</td>
+        <td>40,246</td>
+        </tr><tr>
+        <td class="hasShadow">11/23</td>
+        <td data-price="2507" class="gnd--price">2,507</td>
+        <td>
+        <span data-price="42" class="price_change price-color bold">42</span>
+        <span class="pctchange">1.70%</span>
+        </td>
+        <td>
+        <span class="price-high">2,520</span>
+        <span data-price="55" class="price-max price_change">55</span>
+        </td>
+        <td>
+        <span class="price-high">2,470</span>
+        <span data-price="5" class="price-min price_change">5</span>
+        </td>
+        <td>1,442</td>
+        <td>2,470</td>
+        <td>2,465</td>
+        <td>15,256</td>
+        </tr><tr>
+        <td class="hasShadow">01/24</td>
+        <td data-price="2453" class="gnd--price">2,453</td>
+        <td>
+        <span data-price="37" class="price_change price-color bold">37</span>
+        <span class="pctchange">1.53%</span>
+        </td>
+        <td>
+        <span class="price-high">2,466</span>
+        <span data-price="50" class="price-max price_change">50</span>
+        </td>
+        <td>
+        <span class="price-high">2,424</span>
+        <span data-price="8" class="price-min price_change">8</span>
+        </td>
+        <td>313</td>
+        <td>2,424</td>
+        <td>2,416</td>
+        <td>2,867</td>
+        </tr> </tbody>
+        </table>
+        </div>
+        <div class="gia-dvt">
+        <p>Đơn vị tính: USD/tấn</p>
+        </div>
+        </section> 
+
+
+
+        <section id="arabica-newyork" class="table-content">
+        <h2>Giá cà phê Arabica New York</h2>
+        <div class="live-table">
+        <table class="has-scroll livequote gia-noi-dia has-scroll">
+        <thead>
+        <tr>
+        <th class="hasShadow">Kỳ hạn</th>
+        <th>Giá khớp</th>
+        <th>Thay đổi</th>
+        <th>Cao nhất</th>
+        <th>Thấp nhất</th>
+        <th>Khối lượng</th>
+        <th>Mở cửa</th>
+        <th>Hôm trước</th>
+        <th>HĐ mở</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+        <td class="hasShadow">07/23</td>
+        <td data-price="183.05" class="gnd--price">183.05</td>
+        <td>
+        <span data-price="4.4" class="price_change price-color bold">4.40</span>
+        <span class="pctchange">2.46%</span>
+        </td>
+        <td>
+        <span class="price-high">184.70</span>
+        <span data-price="6.05" class="price-min price_change">6.05</span>
+        </td>
+        <td>
+        <span class="price-high">179.50</span>
+        <span data-price="0.85" class="price-min price_change">0.85</span>
+        </td>
+        <td>23,106</td>
+        <td>179.65</td>
+        <td>178.65</td>
+        <td>68,794</td>
+        </tr><tr>
+        <td class="hasShadow">09/23</td>
+        <td data-price="180.25" class="gnd--price">180.25</td>
+        <td>
+        <span data-price="4.4" class="price_change price-color bold">4.40</span>
+        <span class="pctchange">2.50%</span>
+        </td>
+        <td>
+        <span class="price-high">181.80</span>
+        <span data-price="5.95" class="price-min price_change">5.95</span>
+        </td>
+        <td>
+        <span class="price-high">176.65</span>
+        <span data-price="0.80" class="price-min price_change">0.80</span>
+        </td>
+        <td>14,479</td>
+        <td>176.65</td>
+        <td>175.85</td>
+        <td>65,079</td>
+        </tr><tr>
+        <td class="hasShadow">12/23</td>
+        <td data-price="177.9" class="gnd--price">177.90</td>
+        <td>
+        <span data-price="4.3" class="price_change price-color bold">4.30</span>
+        <span class="pctchange">2.48%</span>
+        </td>
+        <td>
+        <span class="price-high">179.15</span>
+        <span data-price="5.55" class="price-min price_change">5.55</span>
+        </td>
+        <td>
+        <span class="price-high">174.40</span>
+        <span data-price="0.80" class="price-min price_change">0.80</span>
+        </td>
+        <td>7,537</td>
+        <td>174.40</td>
+        <td>173.60</td>
+        <td>36,161</td>
+        </tr><tr>
+        <td class="hasShadow">03/24</td>
+        <td data-price="177.4" class="gnd--price">177.40</td>
+        <td>
+        <span data-price="4.15" class="price_change price-color bold">4.15</span>
+        <span class="pctchange">2.40%</span>
+        </td>
+        <td>
+        <span class="price-high">178.75</span>
+        <span data-price="5.50" class="price-min price_change">5.50</span>
+        </td>
+        <td>
+        <span class="price-high">174.20</span>
+        <span data-price="0.95" class="price-min price_change">0.95</span>
+        </td>
+        <td>2,927</td>
+        <td>174.30</td>
+        <td>173.25</td>
+        <td>17,684</td>
+        </tr> </tbody>
+        </table>
+        </div>
+        <div class="gia-dvt">
+        <p>Đơn vị tính: USD cent/lb; 1lb ~= 0.45kg</p>
+        </div>
+        <div class="gia--arabica-usd">
+        </div>
+        </section> 
+
+
+        <section class="less-height q-guide">
+            <div id="set_h">
+            <h2>Giá cà phê hôm nay 02/06/2023 được cập nhật liên tục</h2>
+            <p><strong>Giá cà phê hôm nay ngày 02/06/2023</strong> trung bình ở mức <strong>61,600 đ/kg</strong> tăng mạnh <strong class="price_change" data-price="1000">1,000</strong> so với ngày hôm trước.</p>
+            <p>Giá cà phê cao nhất thu mua ở các vùng trọng điểm của Tây Nguyên (Đắk Lắk, Lâm Đồng, Gia Lai, Đắk Nông, Kon Tum) được ghi nhận ở mức <strong>61,800 đ/kg</strong></p>
+            <p>Giá cà phê trong nước niêm yết mỗi ngày được tính toán dựa trên giá của hai sàn cà phê thế giới kết hợp với việc khảo sát liên tục từ các doanh nghiệp, đại lý thu mua tại các vùng trọng điểm trồng cà phê trên cả nước.</p>
+            <p>Hướng Nông luôn cố gắng để bám sát nhất với từng vùng, tuy nhiên sẽ có những ngày giá niêm yết không hoàn toàn khớp với giá cà phê thu mua tại địa phương của bà con, nhưng Hướng Nông tin rằng thông tin được niêm yết là nguồn thông tin tham khảo giá trị cho bà con.</p>
+            <h3>Giá cà phê thế giới</h3>
+            <p>Giá cà phê trực tuyến giao dịch trên hai sàn lớn nhất thế giới Robusta London (ICE Futures Europe) và Arabica New York (ICE Futures US) được hệ thống lưu trữ chính xác sau mỗi phiên giao dịch, và đưa tham khảo trên bảng giá này.</p>
+            <p>Hướng Nông không có bất cứ 1 tác động nào khiến giá cà phê thế giới sai khác so với nguyên mẫu của hai sàn giao dịch cà phê.</p>
+            <h3>Giá trừ lùi là gì?</h3>
+            <p>Trừ lùi là mức giá mà bên mua trừ vào giá của bên bán. Thường là do vấn đề về chất lượng và thương hiệu.</p>
+            <p>Ví dụ: Giá cà phê hiện tại là: 1338$/tấn (ngày 30/06/2009), và mức trừ lùi là: 50$/ tấn. Điều này có nghĩa là bên bán chỉ nhận được số tiền là: 1338 - 50 = 1288$/tấn (chưa kể các khoản trừ về các chi phí phát sinh)</p>
+            <h3>Giá FOB là gì?</h3>
+            <p>FOB một thuật ngữ viết tắt trong tiếng Anh của cụm từ Free On Board, nghĩa là Miễn trách nhiệm Trên Boong tàu nơi đi còn gọi là "Giao lên tàu".</p>
+            <p> Trong giao dịch theo giá FOB bên bán hàng cần phải trả cước phí xếp hàng lên tàu. Sự chuyển dịch các rủi ro diễn ra khi hàng hóa vượt qua lan can tàu tại cảng xếp hàng. Về mặt quốc tế, thuật ngữ này chỉ rõ cảng xếp hàng, ví dụ "FOB New York" hay "FOB Hải Phòng". Các khoản chi phí khác như cước vận tải, phí bảo hiểm thuộc về trách nhiệm của bên mua hàng.</p>
+            <hr class="br-1px mb20">
+            </div>
+            </section>
+</body>
+</html>

@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<!-- Website - www.codingnepalweb.com -->
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Tin tức</title>
+  <link rel="stylesheet" href="tin tức.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Fontawesome Link for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+  <link rel="stylesheet" href="../css/navbar.css">
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Calistoga&family=Roboto:wght@300;400;500;700&display=swap"
+    rel="stylesheet" />
+  <script src="tin tức.js" defer></script>
+  <link rel="stylesheet" href="../css/footer.css">
+  <script src="https://code.jquery.com/jquery-latest.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <script>
+    var loader = function () {
+      setTimeout(function () {
+        $('#loader').css({ 'opacity': 0, 'visibility': 'hidden' });
+      }, 1000);
+    };
+    $(function () {
+      loader();
+    });
+  </script>
+  <style>
+    * {
+      /* reset lại margin và padding cho các tag */
+      margin: 0;
+      padding: 0;
+    }
+
+    #loader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 99999;
+      width: 100%;
+      height: 100%;
+      background-color: #fff;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .circle {
+      height: 40px;
+      margin: 50px auto;
+      position: relative;
+      text-align: center;
+      width: 40px;
+      -webkit-animation: circle_dot 2.0s infinite linear;
+      animation: circle_dot 2.0s infinite linear;
+    }
+
+    .circle1,
+    .circle2 {
+      height: 60%;
+      display: inline-block;
+      background-color: #ef5f38;
+      border-radius: 100%;
+      position: absolute;
+      top: 0;
+      width: 60%;
+      -webkit-animation: circle_bounce 2.0s infinite ease-in-out;
+      animation: circle_bounce 2.0s infinite ease-in-out;
+    }
+
+    .circle2 {
+      bottom: 0;
+      top: auto;
+      -webkit-animation-delay: -1.0s;
+      animation-delay: -1.0s;
+    }
+
+    @-webkit-keyframes circle_dot {
+      100% {
+        -webkit-transform: rotate(360deg)
+      }
+    }
+
+    @keyframes circle_dot {
+      100% {
+        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg)
+      }
+    }
+
+    @-webkit-keyframes circle_bounce {
+
+      0%,
+      100% {
+        -webkit-transform: scale(0.0)
+      }
+
+      50% {
+        -webkit-transform: scale(1.0)
+      }
+    }
+
+    @keyframes circle_bounce {
+
+      0%,
+      100% {
+        -webkit-transform: scale(0.0);
+        transform: scale(0.0);
+      }
+
+      50% {
+        -webkit-transform: scale(1.0);
+        transform: scale(1.0);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="loader">
+    <div class="circle">
+      <div class="circle1"></div>
+      <div class="circle2"></div>
+    </div>
+  </div>
+  <header class="header">
+    <a href="../main.html">
+      <img src="../image/Logo.png" class="logo logo-remove" alt="">
+    </a>
+    <div class="bx bx-menu" id="menu-icon"></div>
+    <ul class="navbar">
+      <li>
+        <a href="../main.html"><i class="fa-solid fa-house"></i>Trang Chủ</a>
+      </li>
+      <li><a href="#" style="color: white; background-color: #34b982"><i class="fa-solid fa-newspaper"></i>Tin Tức</a>
+      </li>
+      <li><a href="../Weather/weather.html"><i class="fa-solid fa-sun"></i>Thời Tiết</a></li>
+      <li><a href="../Calculate/calculate.html"><i class="fa-solid fa-calculator"></i>Máy Tính</a></li>
+      <li class="dropdown">
+        <a href="../Giá cả/index.html" target="_blank"><i class="fa-solid fa-money-bill"></i>Giá Cả</a>
+      </li>
+    </ul>
+    <div class="header-btn">
+      <a href="../Form/signUp/signup.html" class="sign-up">Đăng Ký</a>
+      <a href="../Form/login/login.html" class="sign-in">Đăng Nhập</a>
+    </div>
+  </header>
+  <div class="container__heading1">SỰ KIỆN MỚI</div>
+  <div class="mov">
+    <div class="wrapper">
+      <i id="left" class="fa-solid fa-angle-left"></i>
+      <ul class="carousel">
+        <div class="card1">
+          <li class="card">
+            <div class="img">
+              <img
+                src="https://khuyennongvn.gov.vn/data/images/0/2022/12/19/hangweb/hnghi-ktay-hduong2.jpg?dpi=150&quality=100&w=305&mode=crop&anchor=topcenter"
+                target="
+                _blank" alt="img" draggable="false" />
+            </div>
+            <h5 class="tieude">
+              <a href="haiduong.html"
+                target="_blank">
+                Hải Dương: Tọa đàm “Thúc đẩy liên kết sản xuất và tiêu thụ
+                khoai tây cho các tỉnh Đồng bằng sông Hồng”</a>
+            </h5>
+            <span>Khoai tây là cây lương thực - thực phẩm quan trọng, sản phẩm
+              được sử dụng ăn tươi và phục vụ cho ngành công nghiệp chế biến.
+              Hiện nay nhu cầu sử dụng khoai tây trong nước...</span>
+          </li>
+        </div>
+        <div class="card2">
+          <li class="card">
+            <div class="img">
+              <img
+                src="https://khuyennongvn.gov.vn/data/images/0/2022/12/15/hangweb/doanhnghiep-tiengiang5.jpg?dpi=150&quality=100&w=200&mode=crop&anchor=topcenter"
+                alt="img" draggable="false" target="_blank" />
+            </div>
+            <h5 class="tieude">
+              <a target="_blank"
+                href="tiengiang.html">Tọa
+                đàm “Thúc đẩy hợp tác giữa doanh nghiệp với hệ thống
+                khuyến nông” tại Tiền Giang</a>
+            </h5>
+            <span>Ngày 08 tháng 12 năm 2022 tại thành phố Mỹ Tho, tỉnh Tiền
+              Giang, Trung tâm Khuyến nông Quốc gia phối hợp với Sở NN&PTNT
+              tỉnh Tiền Giang...</span>
+          </li>
+        </div>
+        <div class="card1">
+          <li class="card">
+            <div class="img">
+              <img target="_blank"
+                src="https://khuyennongvn.gov.vn/data/images/0/2022/12/12/hangweb/hue-ao-tomlo-hue.jpg?dpi=150&quality=100&w=200&mode=crop&anchor=topcenter"
+                alt="img" draggable="false" />
+            </div>
+            <h5 class="tieude">
+              <a target="_blank"
+                href="hoithao.html">
+                Hội thảo “Giải pháp phát triển nuôi tôm nước lợ bền vững tại
+                một số tỉnh Duyên hải miền Trung”</a>
+            </h5>
+            <span>Ngày 07 - 08 tháng 12 năm 2022, tại tỉnh Thừa Thiên Huế, Trung
+              tâm Khuyến nông Quốc gia phối hợp với Tổng Cục Thủy sản, Sở Nông
+              nghiệp và PTNT tỉnh Thừa Thiên Huế...</span>
+          </li>
+        </div>
+        <div class="card2">
+          <li class="card">
+            <div class="img">
+              <img target="_blank"
+                src="https://khuyennongvn.gov.vn/data/images/0/2022/11/23/hangweb/td-backan2.jpg?dpi=150&quality=100&w=200&mode=crop&anchor=topcenter"
+                alt="img" draggable="false" />
+            </div>
+            <h5 class="tieude">
+              <a target="_blank"
+                href="backan.html">
+                Ngày 16-17/11/2022, Trung tâm Khuyến nông Quốc gia phối hợp với Sở Nông nghiệp và PTNT tỉnh Bắc Kạn,
+                Tỉnh Đoàn Bắc Kạn tổ chức tọa đàm...</a>
+            </h5>
+            <span>Ngày 16-17/11/2022, Trung tâm Khuyến nông Quốc gia phối hợp với
+              Sở Nông nghiệp và PTNT tỉnh Bắc Kạn...</span>
+          </li>
+        </div>
+        <div class="card1">
+          <li class="card">
+            <div class="img">
+              <img target="_blank"
+                src="https://khuyennongvn.gov.vn/data/images/0/2022/11/21/hangweb/hoicho-hbinh1.jpg?dpi=150&quality=100&w=200&mode=crop&anchor=topcenter"
+                alt="img" draggable="false" />
+            </div>
+            <h5 class="tieude">
+              <a target="_blank"
+                href="hoabinh.html">Hoà
+                Bình: Hội chợ Nông nghiệp và triển lãm sản phẩm OCOP vùng
+                Trung du miền núi phía Bắc năm 2022</a>
+            </h5>
+            <span>Tối 17/11/2022, tại Trung tâm Hội chợ và triển lãm tỉnh Hoà
+              Bình đã diễn ra lễ khai mạc Hội chợ Nông nghiệp và triển lãm sản
+              phẩm OCOP vùng Trung du miền núi phía Bắc năm 2022....</span>
+          </li>
+        </div>
+        <div class="card2">
+          <li class="card">
+            <div class="img">
+              <img target="_blank"
+                src="https://khuyennongvn.gov.vn/data/images/0/2022/11/15/hangweb/dd-haiphong5.jpg?dpi=150&quality=100&w=200&mode=crop&anchor=topcenter"
+                alt="img" draggable="false" />
+            </div>
+            <h5 class="tieude">
+              <a target="_blank"
+                href="haiphong.html">Hải
+                Phòng: Diễn đàn Khuyến nông chủ đề “Khuyến nông kết nối
+                sản xuất nông nghiệp theo chuỗi giá trị”</a>
+            </h5>
+            <span>Ngày 10 - 11/11/2022, Trung tâm Khuyến nông Quốc gia phối hợp
+              với Sở Nông nghiệp và Phát triển nông thôn thành phố Hải Phòng
+              tổ chức Diễn đàn Khuyến nông @ Nông nghiệp...</span>
+          </li>
+        </div>
+      </ul>
+      <i id="right" class="fa-solid fa-angle-right"></i>
+    </div>
+  </div>
+  <footer class="footer">
+    <div id="footer">
+      <div class="footer__content">
+        <div class="footer__content-fhead">
+          <p>Liên hệ với chúng tôi</p>
+          <p>Hãy để lại email nếu bạn muốn đồng hành cùng chúng tôi</p>
+          <form action="" class="footer__content-connect">
+            <input type="email" required placeholder="Your Email Address" />
+            <button>Gửi<i class="fa-solid fa-paper-plane"></i></button>
+          </form>
+          <div class="footer__content-icon">
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-linkedin-in"></i>
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-instagram"></i>
+          </div>
+        </div>
+
+        <div class="footer__content-flast">
+          <h2>Đồng hành cùng nông dân Việt</h2>
+          <div class="footer__info">
+            <p>
+              Trường Đại học Công nghệ Thông tin & Truyền Thông Việt - Hàn, Đại
+              học Đà Nẵng
+            </p>
+            <p>
+              Địa chỉ: 470 Đường Trần Đại Nghĩa, Hoà Hải, Ngũ Hành Sơn, Đà Nẵng
+            </p>
+          </div>
+          <img src="/assets/img/Logo.png" alt="" />
+        </div>
+      </div>
+      <div class="footer__foot">
+        <div class="footer__foot-policy">
+          <a href="">our program</a>
+          <a href="">privacy policy</a>
+          <a href="">sell nothing but honesty</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script>
+    let menu = document.querySelector("#menu-icon");
+    let navbar = document.querySelector(".navbar");
+    menu.onclick = () => {
+      menu.classList.toggle("bx-x");
+      navbar.classList.toggle("open");
+    };
+  </script>
+  <script>
+    const headerEL = document.querySelector('.header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        headerEL.classList.add('sticky');
+      }
+      else {
+        headerEL.classList.remove('sticky');
+      }
+    });
+  </script>
+</body>
+
+</html>

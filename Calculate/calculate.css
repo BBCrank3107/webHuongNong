@@ -1,0 +1,76 @@
+.container {
+    max-width: 400px;
+    max-height: 505px;
+    margin: 30vh auto 30px auto;
+    box-shadow: 0px 0px 43px 17px rgba(153, 153, 153, 1);
+}
+
+#display {
+    text-align: right;
+    height: 100px;
+    line-height: 70px;
+    padding: 16px 8px;
+    font-size: 30px;
+}
+
+.hr {
+    height: 2px;
+}
+
+.buttons {
+    display: grid;
+    border-bottom: 1px solid #999;
+    border-left: 1px solid#999;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin-top: 0.5;
+}
+
+.buttons>div {
+    border-top: 1px solid #999;
+    border-right: 1px solid#999;
+}
+
+.button {
+    border: 0.5px solid #999;
+    line-height: 70px;
+    text-align: center;
+    font-size: 30px;
+    cursor: pointer;
+    border-radius: 50px;
+    margin: 3px;
+}
+
+#equal {
+    background-color: rgb(85, 85, 255);
+    color: white;
+}
+
+.button:hover {
+    background-color: #323330;
+    color: white;
+    transition: 0.5s ease-in-out;
+}
+
+@media screen and (max-width: 600px) {
+    section {
+        margin-top: -60px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    section {
+        margin-top: -50px;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    section {
+        margin-top: -50px;
+    }
+}
+
+@media screen and (max-width: 1500px) {
+    section {
+        margin-top: -35px;
+    }
+}

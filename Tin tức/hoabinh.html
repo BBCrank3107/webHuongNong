@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<!-- Website - www.codingnepalweb.com -->
+<b lang="en" dir="ltr">
+  <head>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+    <meta charset="utf-8" />
+    <title>Tin tức</title>
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Fontawesome Link for Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    />
+    <script src="script.js" defer></script>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      h2 {
+        text-align: center;
+      }
+      /* Slideshow container */
+      .slideshow-container {
+        max-width: 500px;
+        position: relative;
+        margin: auto;
+      }
+      /* Ẩn các slider */
+      .mySlides {
+        display: none;
+      }
+      /* Định dạng nội dung Caption */
+      .text {
+        color: #f2f2f2;
+        font-size: 15px;
+        padding: 8px 12px;
+        position: relative;
+        bottom: 8px;
+        width: 100%;
+        text-align: center;
+      }
+
+      /* Thêm hiệu ứng khi chuyển đổi các slide */
+      .fade {
+        -webkit-animation-name: fade;
+        -webkit-animation-duration: 3s;
+        animation-name: fade;
+        animation-duration: 3s;
+      }
+
+      @-webkit-keyframes fade {
+        from {
+          opacity: 0.4;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @keyframes fade {
+        from {
+          opacity: 0.4;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+  <div>
+    <div class="header">
+      <div class="logo">
+        <img src="logo.jpg" alt="" style="width: 30vh" />
+      </div>
+
+      <div class="slideshow-container">
+        <div class="mySlides fade">
+          <img
+            src="https://th.bing.com/th/id/R.48317ea1b22fc3cc286f3392a7f7e55e?rik=%2f87kz2hJbqKJ%2bg&riu=http%3a%2f%2fwww.fcv.espol.edu.ec%2fsites%2ffcv.espol.edu.ec%2ffiles%2fnoticias%2fbiociencias2.png&ehk=v0ft09ronRt07Z%2fxXxlrj8hw9ApAloItudWIKj3%2fqkw%3d&risl=&pid=ImgRaw&r=0"
+            style="width: 600px"
+           
+          />
+         
+        </div>
+
+        <div class="mySlides fade">
+          <img
+            src="https://th.bing.com/th/id/R.fb4559254fa43e95600f778dee24e0d0?rik=zX2p%2bQeGQ9sYhw&pid=ImgRaw&r=0"
+            style="width: 600px"
+            
+          />
+        
+        </div>
+
+        <div class="mySlides fade">
+          <img
+            src="https://www.kimleigh.co.za/wp-content/uploads/2017/02/Agriculture-Banner.jpg"
+            style="width: 600px"
+           
+          />
+      
+        </div>
+      </div>
+      <br />
+
+      <div style="text-align: center">
+        <span class="dot" onclick="currentSlide(0)"></span>
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+      </div>
+
+      <script>
+        //khai báo biến slideIndex đại diện cho slide hiện tại
+        var slideIndex;
+        // KHai bào hàm hiển thị slide
+        function showSlides() {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("dot");
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+
+          slides[slideIndex].style.display = "block";
+          dots[slideIndex].className += " active";
+          //chuyển đến slide tiếp theo
+          slideIndex++;
+          //nếu đang ở slide cuối cùng thì chuyển về slide đầu
+          if (slideIndex > slides.length - 1) {
+            slideIndex = 0;
+          }
+          //tự động chuyển đổi slide sau 5s
+          setTimeout(showSlides, 5000);
+        }
+        //mặc định hiển thị slide đầu tiên
+        showSlides((slideIndex = 0));
+
+        function currentSlide(n) {
+          showSlides((slideIndex = n));
+        }
+      </script>
+    </div>
+    <hr>
+  </div>
+  <h3 style="color: #289467;font-size: 25px;">SỰ KIỆN KHUYẾN NÔNG</h3>
+    <hr>
+    </b>
+    <div class="option">
+    <h3 style="font-size: 30px;">Hoà Bình: Hội chợ Nông nghiệp và triển lãm sản phẩm OCOP vùng Trung du miền núi phía Bắc năm 2022”</h3>
+    <p><b> Tối 17/11/2022, tại Trung tâm Hội chợ và triển lãm tỉnh Hoà Bình đã diễn ra lễ khai mạc Hội chợ Nông nghiệp và triển lãm sản phẩm OCOP vùng Trung du miền núi phía Bắc năm 2022. </b><br>
+    <br>
+    Dự lễ khai mạc có các đồng chí: Nguyễn Phi Long, Ủy viên dự khuyết BCH T.Ư Đảng, Bí thư Tỉnh uỷ tỉnh Hoà Bình; Nguyễn Hoàng Hiệp, Thứ trưởng Bộ NN&PTNT; Bùi Đức Hinh, Phó Bí thư TT Tỉnh uỷ, Chủ tịch HĐND tỉnh; Bùi Văn Khánh, Phó Bí thư Tỉnh ủy, Chủ tịch UBND tỉnh; Đinh Công Sứ, Phó Chủ tịch UBND tỉnh, Trưởng Ban tổ chức Hội chợ; lãnh đạo các sở, ban, ngành, huyện, thành phố, doanh nghiệp và đông đảo nhân dân.
+</p>  <br>
+<br>
+<div class="container"   >
+    <img src="https://khuyennongvn.gov.vn/data/images/0/2022/11/21/hangweb/hoicho-hbinh1.jpg?dpi=150&quality=100&w=630" alt=""> <br>
+</div> <br><br><p style="text-align: center;color: #289467;"><i > Các đại biểu cắt băng khai mạc hội chợ</i></p><br>
+Hội chợ Nông nghiệp và triển lãm sản phẩm OCOP vùng Trung du miền núi phía Bắc năm 2022 do Bộ Nông nghiệp và Phát triển nông thôn phối hợp với Ủy ban nhân dân tỉnh Hòa Bình tổ chức, mở cửa đón khách tham quan và mua sắm trong thời gian 05 ngày, từ ngày 17/11/2022 - 21/11/2022. <br> <br>
+
+Hội chợ có quy mô trên 200 gian hàng của các doanh nghiệp, hợp tác xã, trang trại, cơ sở sản xuất, thương mại… khu vực phía Bắc, trong đó có gần 100 gian hàng thuộc lĩnh vực nông, lâm, ngư nghiệp trưng bày các sản phẩm chủ lực, sản phẩm thuộc chương trình OCOP của các địa phương trong tỉnh Hòa Bình và các tỉnh miền núi phía Bắc; các loại giống cây trồng, vật nuôi, vật tư, thiết bị,… phục vụ sản xuất nông nghiệp. Các gian hàng trưng bày các ngành hàng, mặt hàng phong phú, đa dạng về mẫu mã, từ nông sản đặc hữu đến các sản phẩm thủ công mỹ nghệ, hàng tiêu dùng đều là các sản phẩm có chất lượng, đáp ứng nhu cầu sản xuất, tiêu dùng và xuất khẩu. <br><br>
+
+Phát biểu tại Lễ khai mạc, đồng chí Đinh Công Sứ, Phó Chủ tịch UBND tỉnh Hoà Bình nhấn mạnh: Bên cạnh đẩy mạnh phát triển sản xuất nông nghiệp hàng hóa đối với các loại sản phẩm địa phương có thế mạnh như: cam Cao Phong, bưởi đỏ Tân Lạc, gà bản địa, cá lòng hồ sông Đà, mía tím, rau hữu cơ... Trong những năm qua, tỉnh Hòa Bình đã quan tâm xây dựng các chương trình, quy hoạch, kế hoạch, chính sách để thu hút đầu tư phát triển bền vững, xây dựng chuỗi giá trị và Chương trình Mỗi xã một sản phẩm (OCOP). Đặc biệt, Hòa Bình đã triển khai hỗ trợ phát triển và tiêu thụ nông sản hàng hóa; khuyến khích doanh nghiệp đầu tư vào nông nghiệp; hỗ trợ nông dân về giống, vốn, kỹ thuật nhằm nâng cao chất lượng sản phẩm, tạo ra sản phẩm sạch, đảm bảo vệ sinh an toàn thực phẩm. <br><br>
+
+Cũng nhân dịp này, UBND tỉnh Hòa Bình đã công bố Quyết định công nhận sản phẩm OCOP năm 2022; cấp giấy chứng nhận cho 23 sản phẩm gồm: 2 sản phẩm 4 sao và 21 sản phẩm 3 sao./. <br><br><br>
+<div class="container">
+<img src="https://khuyennongvn.gov.vn/data/images/0/2022/11/21/hangweb/hoicho-hbinh3.jpg?dpi=150&quality=100&w=630" alt=""></div>
+<br><br>
+<p style="text-align: center;color: #289467;"><i>Các đại biểu thăm gian hàng trưng bày sản phẩm nông nghiệp tại hội chợ </i><br></p>
+Sau khi thăm mô hình khoai tây tại huyện Thanh Hà và Tứ Kỳ của tỉnh Hải Dương, các đại biểu và nông dân đã hiểu rõ được đặc tính của cây khoai tây, các biện pháp kỹ thuật canh tác để tăng năng suất, cách tiếp cận thị trường và kết nối tiêu thụ với doanh nghiệp thu mua sản phẩm. Đồng thời, các đại biểu trân trọng cảm ơn Trung tâm Khuyến nông Quốc Gia, Viện Cây lương thực và Cây thực phẩm, Trung tâm Khuyến nông 3 tỉnh Hải Dương, Thái Bình và Nam Định đã tạo điều kiện được tham dự buổi tọa đàm thật bổ ích và ý nghĩa. <br>
+<br><br><br>
+<div class="container">
+    <img src="https://khuyennongvn.gov.vn/data/images/0/2022/11/21/hangweb/hoicho-hbinh2.jpg?dpi=150&quality=100&w=630" alt=""></div>   
+   <br><br><br> <p style="text-align: center;color: #289467;">Các đại biểu sử dụng điện thoại để truy xuất nguồn gốc sản phẩm <i></i>
+
+</div>
+
+    </div>
+    <br><br>
+    <hr>
+    <h3 style="color: #289467;font-size: 25px;">TIN TỨC LIÊN QUAN</h3>
+    <hr>
+    <br>
+    <div class="wrapper">
+        <i id="left" class="fa-solid fa-angle-left"></i>
+        <ul class="carousel">
+          <div class="card1">
+            <li class="card">
+              <div class="img">
+                <img
+                  src="https://khuyennongvn.gov.vn/data/images/0/2022/12/19/hangweb/hnghi-ktay-hduong2.jpg?dpi=150&quality=100&w=305&mode=crop&anchor=topcenter"
+                  alt="img"
+                  draggable="false"
+                />
+              </div>
+              <h5 class="tieude">
+                <a
+                  href="haiduong.html"
+                >
+                  Hải Dương: Tọa đàm “Thúc đẩy liên kết sản xuất và tiêu thụ
+                  khoai tây cho các tỉnh Đồng bằng sông Hồng”</a
+                >
+              </h5>
+              <span
+                >Khoai tây là cây lương thực - thực phẩm quan trọng, sản phẩm
+                được sử dụng ăn tươi và phục vụ cho ngành công nghiệp chế biến.
+                Hiện nay nhu cầu sử dụng khoai tây trong nước và thế giới là rất
+                lớn ...</span
+              >
+            </li>
+          </div>
+          <div class="card2">
+            <li class="card">
+              <div class="img">
+                <img
+                  src="https://khuyennongvn.gov.vn/data/images/0/2022/12/15/hangweb/doanhnghiep-tiengiang5.jpg?dpi=150&quality=100&w=200&mode=crop&anchor=topcenter"
+                  alt="img"
+                  draggable="false"
+                />
+              </div>
+              <h5 class="tieude">
+                <a
+                  href="tiengiang.html"
+                  >Tọa đàm “Thúc đẩy hợp tác giữa doanh nghiệp với hệ thống
+                  khuyến nông” tại Tiền Giang</a
+                >
+              </h5>
+              <span
+                >Ngày 08 tháng 12 năm 2022 tại thành phố Mỹ Tho, tỉnh Tiền
+                Giang, Trung tâm Khuyến nông Quốc gia phối hợp với Sở NN&PTNT
+                tỉnh Tiền Giang tổ chức tọa đàm chủ đề...</span
+              >
+            </li>
+          </div>
+          <div class="card1">
+            <li class="card">
+              <div class="img">
+                <img
+                  src="https://khuyennongvn.gov.vn/data/images/0/2022/12/12/hangweb/hue-ao-tomlo-hue.jpg?dpi=150&quality=100&w=200&mode=crop&anchor=topcenter"
+                  alt="img"
+                  draggable="false"
+                />
+              </div>
+              <h5 class="tieude">
+                <a
+                  href="hoithao.html"
+                >
+                  Hội thảo “Giải pháp phát triển nuôi tôm nước lợ bền vững tại
+                  một số tỉnh Duyên hải miền Trung”</a
+                >
+              </h5>
+              <span
+                >Ngày 07 - 08 tháng 12 năm 2022, tại tỉnh Thừa Thiên Huế, Trung
+                tâm Khuyến nông Quốc gia phối hợp với Tổng Cục Thủy sản, Sở Nông nghiệp và PTNT...</span
+              >
+            </li>
+          </div>
+          <div class="card2">
+            <li class="card">
+              <div class="img">
+                <img
+                  src="https://khuyennongvn.gov.vn/data/images/0/2022/11/23/hangweb/td-backan2.jpg?dpi=150&quality=100&w=200&mode=crop&anchor=topcenter"
+                  alt="img"
+                  draggable="false"
+                />
+              </div>
+              <h5 class="tieude">
+                <a
+                  href="backan.html"
+                >
+                  Tọa đàm Liên kết sản xuất tiêu thụ sản phẩm nông nghiệp tại
+                  tỉnh Bắc Kạn</a
+                >
+              </h5>
+              <span
+                >Ngày 16-17/11/2022, Trung tâm Khuyến nông Quốc gia phối hợp với
+                Sở Nông nghiệp và PTNT tỉnh Bắc Kạn, Tỉnh Đoàn Bắc Kạn tổ chức tọa đàm ...</span
+              >
+            </li>
+          </div>
+          <div class="card1">
+            <li class="card">
+              <div class="img">
+                <img
+                  src="https://khuyennongvn.gov.vn/data/images/0/2022/11/21/hangweb/hoicho-hbinh1.jpg?dpi=150&quality=100&w=200&mode=crop&anchor=topcenter"
+                  alt="img"
+                  draggable="false"
+                />
+              </div>
+              <h5 class="tieude">
+                <a
+                  href="hoabinh.html"
+                  >Hoà Bình: Hội chợ Nông nghiệp và triển lãm sản phẩm OCOP vùng
+                  Trung du miền núi phía Bắc năm 2022</a
+                >
+              </h5>
+              <span
+                >Tối 17/11/2022, tại Trung tâm Hội chợ và triển lãm tỉnh Hoà
+                Bình đã diễn ra lễ khai mạc Hội chợ Nông nghiệp và triển lãm sản
+                phẩm OCOP vùng Trung du miền núi phía Bắc năm 2022....</span
+              >
+            </li>
+          </div>
+          <div class="card2">
+            <li class="card">
+              <div class="img">
+                <img
+                  src="https://khuyennongvn.gov.vn/data/images/0/2022/11/15/hangweb/dd-haiphong5.jpg?dpi=150&quality=100&w=200&mode=crop&anchor=topcenter"
+                  alt="img"
+                  draggable="false"
+                />
+              </div>
+              <h5 class="tieude">
+                <a
+                  href="haiphong.html"
+                  >Hải Phòng: Diễn đàn Khuyến nông chủ đề “Khuyến nông kết nối
+                  sản xuất nông nghiệp theo chuỗi giá trị”</a
+                >
+              </h5>
+              <span
+                >Ngày 10 - 11/11/2022, Trung tâm Khuyến nông Quốc gia phối hợp
+                với Sở Nông nghiệp và Phát triển nông thôn thành phố Hải Phòng
+                tổ chức ...</span
+              >
+            </li>
+          </div>
+        </ul>
+        
+        <i id="right" class="fa-solid fa-angle-right"></i>
+        
+      </div>
+  </body>
+</html>

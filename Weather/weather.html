@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather</title>
+  <link rel="icon" href="../Trang chủ/image/Logo.png" type="image/x-icon">
+  <script src="js/all.min.js"></script>
+  <script src="js/moment.js"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../fontawesome-free-6.4.0-web/fontawesome-free-6.4.0-web/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css" />
+  <link rel="stylesheet" href="weather.css" />
+  <link rel="stylesheet" href="../css/navbar.css">
+  <link rel="stylesheet" href="../css/footer.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <script src="https://code.jquery.com/jquery-latest.js"></script>
+  <script>
+    var loader = function () {
+      setTimeout(function () {
+        $('#loader').css({ 'opacity': 0, 'visibility': 'hidden' });
+      }, 1000);
+    };
+    $(function () {
+      loader();
+    });
+  </script>
+  <style>
+    * {
+      /* reset lại margin và padding cho các tag */
+      margin: 0;
+      padding: 0;
+    }
+
+    #loader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 99999;
+      width: 100%;
+      height: 100%;
+      background-color: #fff;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .circle {
+      height: 40px;
+      margin: 50px auto;
+      position: relative;
+      text-align: center;
+      width: 40px;
+      -webkit-animation: circle_dot 2.0s infinite linear;
+      animation: circle_dot 2.0s infinite linear;
+    }
+
+    .circle1,
+    .circle2 {
+      height: 60%;
+      display: inline-block;
+      background-color: #ef5f38;
+      border-radius: 100%;
+      position: absolute;
+      top: 0;
+      width: 60%;
+      -webkit-animation: circle_bounce 2.0s infinite ease-in-out;
+      animation: circle_bounce 2.0s infinite ease-in-out;
+    }
+
+    .circle2 {
+      bottom: 0;
+      top: auto;
+      -webkit-animation-delay: -1.0s;
+      animation-delay: -1.0s;
+    }
+
+    @-webkit-keyframes circle_dot {
+      100% {
+        -webkit-transform: rotate(360deg)
+      }
+    }
+
+    @keyframes circle_dot {
+      100% {
+        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg)
+      }
+    }
+
+    @-webkit-keyframes circle_bounce {
+
+      0%,
+      100% {
+        -webkit-transform: scale(0.0)
+      }
+
+      50% {
+        -webkit-transform: scale(1.0)
+      }
+    }
+
+    @keyframes circle_bounce {
+
+      0%,
+      100% {
+        -webkit-transform: scale(0.0);
+        transform: scale(0.0);
+      }
+
+      50% {
+        -webkit-transform: scale(1.0);
+        transform: scale(1.0);
+      }
+    }
+  </style>
+</head>
+
+<style>
+  body {
+    background-image: url("other-applications.jpg");
+    background-position: center;
+    z-index: -1;
+  }
+</style>
+
+<body>
+  <div id="loader">
+    <div class="circle">
+      <div class="circle1"></div>
+      <div class="circle2"></div>
+    </div>
+  </div>
+  <header class="header">
+    <a href="../main.html">
+      <img src="../image/Logo.png" class="logo logo-remove" alt="">
+    </a>
+    <div class="bx bx-menu" id="menu-icon"></div>
+    <ul class="navbar">
+      <li>
+        <a href="../main.html"><i class="fa-solid fa-house"></i>Trang Chủ</a>
+      </li>
+      <li><a href="../Tin tức/tin tức.html"><i class="fa-solid fa-newspaper"></i>Tin Tức</a></li>
+      <li><a href="#" style="color: white; background-color: #34b982"><i class="fa-solid fa-sun"></i>Thời Tiết</a></li>
+      <li><a href="../Calculate/calculate.html"><i class="fa-solid fa-calculator"></i>Máy Tính</a></li>
+      <li class="dropdown">
+        <a href="../Giá cả/index.html" target="_blank"><i class="fa-solid fa-money-bill"></i>Giá Cả</a>
+      </li>
+    </ul>
+    <div class="header-btn">
+      <a href="../Form/signUp/signup.html" class="sign-up">Đăng Ký</a>
+      <a href="../Form/login/login.html" class="sign-in">Đăng Nhập</a>
+    </div>
+  </header>
+  <div class="container animate__animated animate__bounce animate__delay-1s">
+    <div class="main-section">
+      <div class="search-bar">
+        <i class="fas fa-search search-icon"></i>
+        <input type="text" name="search-city" id="search-input" placeholder="Tìm kiếm thành phố..." />
+      </div>
+      <div class="info-wrapper">
+        <br />
+        <p class="city-name">--</p>
+        <p class="weather-state">--</p>
+        <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="weather-icon" />
+        <p class="temperature">--</p>
+      </div>
+    </div>
+    <div class="additional-section">
+      <div class="row">
+        <div class="item">
+          <div class="label">MT Mọc</div>
+          <div class="value sunrise">--</div>
+        </div>
+        <div class="item">
+          <div class="label">MT Lặn</div>
+          <div class="value sunset">--</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="item">
+          <div class="label">Độ ẩm</div>
+          <div class="value"><span class="humidity">--</span>%</div>
+        </div>
+        <div class="item">
+          <div class="label">Gió</div>
+          <div class="value"><span class="wind-speed">--</span> km/h</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="footer">
+    <div id="footer">
+      <div class="footer__content">
+        <div class="footer__content-fhead">
+          <p>Liên hệ với chúng tôi</p>
+          <p>Hãy để lại email nếu bạn muốn đồng hành cùng chúng tôi</p>
+          <form action="" class="footer__content-connect">
+            <input type="email" required placeholder="Your Email Address" />
+            <button>Gửi<i class="fa-solid fa-paper-plane"></i></button>
+          </form>
+          <div class="footer__content-icon">
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-linkedin-in"></i>
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-instagram"></i>
+          </div>
+        </div>
+
+        <div class="footer__content-flast">
+          <h2>Đồng hành cùng nông dân Việt</h2>
+          <div class="footer__info">
+            <p>
+              Trường Đại học Công nghệ Thông tin & Truyền Thông Việt - Hàn, Đại
+              học Đà Nẵng
+            </p>
+            <p>
+              Địa chỉ: 470 Đường Trần Đại Nghĩa, Hoà Hải, Ngũ Hành Sơn, Đà Nẵng
+            </p>
+          </div>
+          <img src="/assets/img/Logo.png" alt="" />
+        </div>
+      </div>
+      <div class="footer__foot">
+        <div class="footer__foot-policy">
+          <a href="">our program</a>
+          <a href="">privacy policy</a>
+          <a href="">sell nothing but honesty</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script>
+    let menu = document.querySelector("#menu-icon");
+    let navbar = document.querySelector(".navbar");
+    menu.onclick = () => {
+      menu.classList.toggle("bx-x");
+      navbar.classList.toggle("open");
+    };
+  </script>
+
+  <script>
+    const headerEL = document.querySelector('.header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        headerEL.classList.add('sticky');
+      }
+      else {
+        headerEL.classList.remove('sticky');
+      }
+    });
+  </script>
+  <script src="js/index.js"></script>
+</body>
+
+</html>
